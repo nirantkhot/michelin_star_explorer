@@ -37,13 +37,13 @@ def get_place_rating(name: str, address: str) -> Optional[float]:
                 details_url = "https://maps.googleapis.com/maps/api/place/details/json"
                 details_params = {
                     'place_id': place_id,
-                    'fields': 'rating',
+                    'fields': 'rating,user_ratings_total',
                     'key': GOOGLE_API_KEY
                 }
                 details_response = requests.get(details_url, params=details_params)
                 details_response.raise_for_status()
                 details_data = details_response.json()
-                return details_data.get('result', {}).get('rating')
+                return details_data.get('result', {}).get('rating'), details_data.get('result', {}).get('user_ratings_total')
         return None
     except Exception as e:
         print(f"Error fetching rating for {name}: {str(e)}")
@@ -57,8 +57,9 @@ df['google_rating'] = None
 
 # Fetch ratings for each restaurant
 for idx, row in df.iterrows():
-    rating = get_place_rating(row['Name'], row['Address'])
+    rating, reviews = get_place_rating(row['Name'], row['Address'])
     df.at[idx, 'google_rating'] = rating
+    df.at[idx, 'google_reviews'] = reviews
     time.sleep(0.5)  # Rate limiting to avoid API quota issues
     if idx % 10 == 0:
         print(f"Processed {idx} restaurants...")
