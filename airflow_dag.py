@@ -148,6 +148,14 @@ dag = DAG(
     catchup=False,  # Set to False to prevent backfilling
 )
 
+dag_google = DAG(
+    'google_api_call',
+    default_args=default_args,
+    description='A simple DAG to call the Google API',
+    schedule='@weekly',
+    catchup=False,
+)
+
 # Define the task
 api_call_task = PythonOperator(
     task_id='task_dag',
@@ -158,7 +166,7 @@ api_call_task = PythonOperator(
 google_dag_task = PythonOperator(
     task_id='google_dag',
     python_callable=google_dag,
-    dag=dag,
+    dag=dag_google,
 )
 
 # Set task dependencies (in this case, just one task, so no dependencies)
