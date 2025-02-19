@@ -151,7 +151,7 @@ dag = DAG(
 # Define the task
 api_call_task = PythonOperator(
     task_id='task_dag',
-    python_callable=call_api,
+    python_callable=task_dag,
     dag=dag,
 )
 
