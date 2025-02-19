@@ -11,6 +11,7 @@ import time
 from typing import Optional
 import os
 from dotenv import load_dotenv
+from michelin_cuisine_aggregation import aggregate_top_cuisines_by_rating
 
 load_dotenv()
 
@@ -193,14 +194,6 @@ dag = DAG(
     catchup=False,  # Set to False to prevent backfilling
 )
 
-dag_google = DAG(
-    'google_api_call',
-    default_args=default_args,
-    description='A simple DAG to call the Google API',
-    schedule='@weekly',
-    catchup=False,
-)
-
 # Define the task
 api_call_task = PythonOperator(
     task_id='task_dag',
@@ -211,7 +204,7 @@ api_call_task = PythonOperator(
 google_dag_task = PythonOperator(
     task_id='google_dag',
     python_callable=google_dag,
-    dag=dag_google,
+    dag=dag,
 )
 
 aggregation_task = PythonOperator(
@@ -219,5 +212,11 @@ aggregation_task = PythonOperator(
     python_callable=aggregate_michelin_data,
     dag=dag,
 )
-# Set task dependencies (in this case, just one task, so no dependencies)
-api_call_task >> google_dag_task >> aggregation_task
+
+aggregation_cuisine_task = PythonOperator(
+    task_id='aggregate_top_cuisines_by_rating',
+    python_callable=aggregate_top_cuisines_by_rating,
+    dag=dag,
+)
+
+api_call_task >> google_dag_task >> [ aggregation_task, aggregation_cuisine_task]
