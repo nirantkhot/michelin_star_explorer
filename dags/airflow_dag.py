@@ -15,9 +15,9 @@ from scripts.michelin_cuisine_aggregation import aggregate_top_cuisines_by_ratin
 
 load_dotenv()
 
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-if not GOOGLE_API_KEY:
-    raise ValueError("Please set GOOGLE_API_KEY in .env file")
+GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
+if not GOOGLE_PLACES_API_KEY:
+    raise ValueError("Please set GOOGLE_PLACES_API_KEY in .env file")
 
 def get_place_rating(name: str, address: str) -> Optional[float]:
     """Fetch Google Places rating for a restaurant."""
@@ -30,7 +30,7 @@ def get_place_rating(name: str, address: str) -> Optional[float]:
         'input': query,
         'inputtype': 'textquery',
         'fields': 'place_id,rating',
-        'key': GOOGLE_API_KEY
+        'key': GOOGLE_PLACES_API_KEY
     }
 
     try:
@@ -46,7 +46,7 @@ def get_place_rating(name: str, address: str) -> Optional[float]:
                 details_params = {
                     'place_id': place_id,
                     'fields': 'rating,user_ratings_total',
-                    'key': GOOGLE_API_KEY
+                    'key': GOOGLE_PLACES_API_KEY
                 }
                 details_response = requests.get(details_url, params=details_params)
                 details_response.raise_for_status()

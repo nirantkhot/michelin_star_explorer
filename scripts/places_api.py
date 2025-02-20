@@ -6,10 +6,10 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-if not GOOGLE_API_KEY:
-    raise ValueError("Please set GOOGLE_API_KEY in .env file")
+data_folder = os.getenv('DATA_FOLDER')
+GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
+if not GOOGLE_PLACES_API_KEY:
+    raise ValueError("Please set GOOGLE_PLACES_API_KEY in .env file")
 
 def get_place_rating(name: str, address: str) -> Optional[float]:
     """Fetch Google Places rating for a restaurant."""
@@ -22,7 +22,7 @@ def get_place_rating(name: str, address: str) -> Optional[float]:
         'input': query,
         'inputtype': 'textquery',
         'fields': 'place_id,rating',
-        'key': GOOGLE_API_KEY
+        'key': GOOGLE_PLACES_API_KEY
     }
 
     try:
@@ -38,7 +38,7 @@ def get_place_rating(name: str, address: str) -> Optional[float]:
                 details_params = {
                     'place_id': place_id,
                     'fields': 'rating,user_ratings_total',
-                    'key': GOOGLE_API_KEY
+                    'key': GOOGLE_PLACES_API_KEY
                 }
                 details_response = requests.get(details_url, params=details_params)
                 details_response.raise_for_status()
@@ -50,7 +50,7 @@ def get_place_rating(name: str, address: str) -> Optional[float]:
         return None
 
 # Read the CSV
-df = pd.read_csv('michelin_my_maps.csv')
+df = pd.read_csv(f'{data_folder}michelin_my_maps.csv')
 
 # Add Google ratings column
 df['google_rating'] = None
@@ -64,7 +64,7 @@ for idx, row in df.iterrows():
     if idx % 10 == 0:
         print(f"Processed {idx} restaurants...")
 
-data_folder = '../data'
+
 # Save results
 df.to_csv(f'{data_folder}michelin_with_google_ratings.csv', index=False)
 print("Done! Results saved to michelin_with_google_ratings.csv")
