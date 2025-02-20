@@ -1,0 +1,5 @@
+apache-airflow
+requests
+pymongo
+pandas
+python-dotenv

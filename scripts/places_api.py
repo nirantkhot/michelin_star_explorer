@@ -14,22 +14,22 @@ if not GOOGLE_API_KEY:
 def get_place_rating(name: str, address: str) -> Optional[float]:
     """Fetch Google Places rating for a restaurant."""
     base_url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json"
-    
+
     # Combine name and address for more accurate results
     query = f"{name} {address}"
-    
+
     params = {
         'input': query,
         'inputtype': 'textquery',
         'fields': 'place_id,rating',
         'key': GOOGLE_API_KEY
     }
-    
+
     try:
         response = requests.get(base_url, params=params)
         response.raise_for_status()
         data = response.json()
-        
+
         if data['candidates']:
             place_id = data['candidates'][0].get('place_id')
             if place_id:
@@ -64,7 +64,7 @@ for idx, row in df.iterrows():
     if idx % 10 == 0:
         print(f"Processed {idx} restaurants...")
 
+data_folder = '../data'
 # Save results
-df.to_csv('michelin_with_google_ratings.csv', index=False)
+df.to_csv(f'{data_folder}michelin_with_google_ratings.csv', index=False)
 print("Done! Results saved to michelin_with_google_ratings.csv")
-

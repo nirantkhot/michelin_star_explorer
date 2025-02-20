@@ -11,7 +11,7 @@ import time
 from typing import Optional
 import os
 from dotenv import load_dotenv
-from michelin_cuisine_aggregation import aggregate_top_cuisines_by_rating
+from scripts.michelin_cuisine_aggregation import aggregate_top_cuisines_by_rating
 
 load_dotenv()
 
@@ -22,22 +22,22 @@ if not GOOGLE_API_KEY:
 def get_place_rating(name: str, address: str) -> Optional[float]:
     """Fetch Google Places rating for a restaurant."""
     base_url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json"
-    
+
     # Combine name and address for more accurate results
     query = f"{name} {address}"
-    
+
     params = {
         'input': query,
         'inputtype': 'textquery',
         'fields': 'place_id,rating',
         'key': GOOGLE_API_KEY
     }
-    
+
     try:
         response = requests.get(base_url, params=params)
         response.raise_for_status()
         data = response.json()
-        
+
         if data['candidates']:
             place_id = data['candidates'][0].get('place_id')
             if place_id:
@@ -71,7 +71,7 @@ def json_to_mongo(json_data):
     client = MongoClient(MONGO_URI)
     db = client[DB_NAME]
     collection = db[COLLECTION_NAME]
-    
+
     updated_count = 0
     inserted_count = 0
     # Insert JSON data into MongoDB collection
@@ -131,7 +131,7 @@ def google_dag():
         json_data = csv_to_json(csv_output.getvalue())
         json_to_mongo(json_data)
     print(f"Google API DAG Task completed successfully")
- 
+
 # Aggregation function to summarize Michelin restaurant data
 def aggregate_michelin_data():
     """Aggregates Michelin restaurant data and stores results in MongoDB."""
@@ -141,7 +141,7 @@ def aggregate_michelin_data():
 
     # Extract City & Country from "Location" column
     collection.update_many(
-        {}, 
+        {},
         [
             {"$set": {
                 "City": {"$arrayElemAt": [{"$split": ["$Location", ", "]}, 0]},
