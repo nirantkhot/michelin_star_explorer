@@ -116,40 +116,62 @@ def get_data_from_gcs(bucket_name: str, file_name: str) -> Optional[str]:
         return None
 
 # Function to check if data already exists in MongoDB
-def data_exists_in_mongo() -> bool:
-    """Check if any data exists in the MongoDB collection."""
-    client = MongoClient(MONGO_URI)
-    db = client[DB_NAME]
-    collection = db[COLLECTION_NAME]
-    return collection.count_documents({}) > 0  # Returns True if documents exist, otherwise False
+def data_exists_in_mongo(mongo_uri: str, db_name: str, collection_name: str, filter_criteria: Optional[dict] = None) -> bool:
+    """Check if any data exists in the specified MongoDB collection based on optional filter criteria."""
+    client = MongoClient(mongo_uri)
+    db = client[db_name]
+    collection = db[collection_name]
+    # Use the provided filter criteria or an empty dict if none is provided
+    return collection.count_documents(filter_criteria or {}) > 0  # Returns True if documents exist, otherwise False
 
-# Function to download data from GitHub and upload to GCS
-def download_github_to_gcs():
-    """Download data from GitHub and upload it to Google Cloud Storage."""
+def fetch_github_data(source_url) -> Optional[str]:
+    """Fetch data from GitHub."""
     try:
-        response = requests.get(REST_GITHUB_URL)
+        response = requests.get(source_url)
         response.raise_for_status()
-        csv_data = response.text
-
-        # Upload to GCS
-        client = storage.Client()
-        bucket = client.bucket(MICHELIN_BUCKET_NAME)  # Use the new variable
-        blob = bucket.blob(MICHELIN_FILE_NAME)  # Use the new variable
-        blob.upload_from_string(csv_data, content_type='text/csv')
-
-        print("Data downloaded from GitHub and uploaded to GCS successfully.")
+        return response.text
     except requests.exceptions.RequestException as e:
         print(f"Failed to download from GitHub: {e}")
+        return None
+
+def upload_to_gcs(data: str, bucket_name: str, file_name: str):
+    """Upload data to Google Cloud Storage."""
+    try:
+        client = storage.Client()
+        bucket = client.bucket(bucket_name)
+        blob = bucket.blob(file_name)
+        blob.upload_from_string(data, content_type='text/csv')
+        print("Data uploaded to GCS successfully.")
     except Exception as e:
         print(f"Failed to upload to GCS: {e}")
+
+def download_from_gcs(bucket_name: str, file_name: str) -> Optional[str]:
+    """Download data from Google Cloud Storage."""
+    client = storage.Client()
+    bucket = client.bucket(bucket_name)
+    blob = bucket.blob(file_name)
+
+    try:
+        data = blob.download_as_text()
+        print("Data downloaded from GCS successfully.")
+        return data
+    except Exception as e:
+        print(f"Error fetching data from GCS: {str(e)}")
+        return None
+
+def michelin_to_gcs(source_url,bucket_name, file_name):
+    """Download data from GitHub and upload it to Google Cloud Storage."""
+    csv_data = fetch_github_data(source_url)  # Call the new function to fetch data
+    if csv_data:  # Proceed only if data was fetched successfully
+        upload_to_gcs(csv_data, bucket_name, file_name)  # Upload to GCS
 
 # Modify the call_api function to check for GCS data first
 def call_api():
     # Download from GitHub and upload to GCS
-    download_github_to_gcs()
+    michelin_to_gcs(REST_GITHUB_URL,MICHELIN_BUCKET_NAME, MICHELIN_FILE_NAME )
 
     # Check if data exists in MongoDB
-    if data_exists_in_mongo():
+    if data_exists_in_mongo(MONGO_URI, DB_NAME, COLLECTION_NAME):
         print("Data already exists in MongoDB. Skipping API call.")
         return None  # Skip API call if data exists
 
@@ -173,7 +195,7 @@ def task_dag():
     json_to_mongo(json_data)
     print("DAG Task completed successfully")
 
-def google_dag():
+def places_api_call():
     csv_data = call_api()
     if csv_data is not None:
         csv_file = StringIO(csv_data)
@@ -189,6 +211,8 @@ def google_dag():
                 print(f"Processed {idx} restaurants...")
         csv_output = StringIO()
         df.to_csv(csv_output, index=False)
+        #upload to gcs
+
         json_data = csv_to_json(csv_output.getvalue())
         json_to_mongo(json_data)
     print(f"Google API DAG Task completed successfully")
@@ -262,9 +286,9 @@ api_call_task = PythonOperator(
     dag=dag,
 )
 
-google_dag_task = PythonOperator(
-    task_id='google_dag',
-    python_callable=google_dag,
+places_api_call_task = PythonOperator(
+    task_id='places_api_call',
+    python_callable=places_api_call,
     dag=dag,
 )
 
@@ -280,4 +304,4 @@ aggregation_cuisine_task = PythonOperator(
     dag=dag,
 )
 
-api_call_task >> google_dag_task >> [ aggregation_task, aggregation_cuisine_task]
+api_call_task >> places_api_call_task >> [ aggregation_task, aggregation_cuisine_task]
