@@ -3,3 +3,4 @@ requests
 pymongo
 pandas
 python-dotenv
+google-cloud-storage

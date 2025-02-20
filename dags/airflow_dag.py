@@ -12,9 +12,16 @@ from typing import Optional
 import os
 from dotenv import load_dotenv
 from scripts.michelin_cuisine_aggregation import aggregate_top_cuisines_by_rating
+from google.cloud import storage
 
 load_dotenv()
 
+# Restaurant Github CSV data
+REST_GITHUB_URL = "https://raw.githubusercontent.com/ngshiheng/michelin-my-maps/refs/heads/main/data/michelin_my_maps.csv"
+# Load MongoDB connection details from environment variables
+MONGO_URI = os.getenv('MONGO_URI', 'mongodb://localhost:27017')
+DB_NAME = os.getenv('DB_NAME', 'msds-697-section-2')
+COLLECTION_NAME = os.getenv('COLLECTION_NAME', 'testRestaurants')
 GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
 if not GOOGLE_PLACES_API_KEY:
     raise ValueError("Please set GOOGLE_PLACES_API_KEY in .env file")
@@ -58,13 +65,7 @@ def get_place_rating(name: str, address: str) -> Optional[float]:
         return None
 
 
-# Restaurant Github CSV data
-REST_GITHUB_URL = "https://raw.githubusercontent.com/ngshiheng/michelin-my-maps/refs/heads/main/data/michelin_my_maps.csv"
 
-# MongoDB connection details
-MONGO_URI = 'mongodb://localhost:27017'
-DB_NAME = 'msds-697-section-2'
-COLLECTION_NAME = 'testRestaurants'
 
 # Function to upllad data into Mongo collection
 def json_to_mongo(json_data):
@@ -96,8 +97,41 @@ def csv_to_json(csv_data):
         json_data = [row for row in csv_reader]
     return json_data
 
-# Define the function that calls the API
+# Function to get data from Google Cloud Storage
+def get_data_from_gcs(bucket_name: str, file_name: str) -> Optional[str]:
+    """Fetch data from a specified GCS bucket and file."""
+    client = storage.Client()
+    bucket = client.bucket(bucket_name)
+    blob = bucket.blob(file_name)
+
+    try:
+        data = blob.download_as_text()
+        return data
+    except Exception as e:
+        print(f"Error fetching data from GCS: {str(e)}")
+        return None
+
+# Function to check if data already exists in MongoDB
+def data_exists_in_mongo() -> bool:
+    """Check if any data exists in the MongoDB collection."""
+    client = MongoClient(MONGO_URI)
+    db = client[DB_NAME]
+    collection = db[COLLECTION_NAME]
+    return collection.count_documents({}) > 0  # Returns True if documents exist, otherwise False
+
+# Modify the call_api function to check for GCS data first
 def call_api():
+    # Check if data exists in MongoDB
+    if data_exists_in_mongo():
+        print("Data already exists in MongoDB. Skipping API call.")
+        return None  # Skip API call if data exists
+
+    # Attempt to get data from GCS
+    gcs_data = get_data_from_gcs('your_bucket_name', 'your_file_name.csv')
+    if gcs_data:
+        return gcs_data  # Return GCS data if available
+
+    # If GCS data is not available, make the API call
     try:
         response = requests.get(REST_GITHUB_URL)
         response.raise_for_status()
