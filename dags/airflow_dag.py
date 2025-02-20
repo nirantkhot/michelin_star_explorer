@@ -17,7 +17,7 @@ from google.cloud import storage
 load_dotenv()
 
 # Restaurant Github CSV data
-REST_GITHUB_URL = "https://raw.githubusercontent.com/ngshiheng/michelin-my-maps/refs/heads/main/data/michelin_my_maps.csv"
+REST_GITHUB_URL = os.getenv('REST_GITHUB_URL')
 # Load MongoDB connection details from environment variables
 MONGO_URI = os.getenv('MONGO_URI', 'mongodb://localhost:27017')
 DB_NAME = os.getenv('DB_NAME', 'msds-697-section-2')
@@ -25,6 +25,10 @@ COLLECTION_NAME = os.getenv('COLLECTION_NAME', 'testRestaurants')
 GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
 if not GOOGLE_PLACES_API_KEY:
     raise ValueError("Please set GOOGLE_PLACES_API_KEY in .env file")
+
+# Define variables for GCS bucket and file name
+MICHELIN_BUCKET_NAME = os.getenv('MICHELIN_BUCKET_NAME')  # Replace with your Michelin bucket name
+MICHELIN_FILE_NAME = 'michelin_data.csv'  # Replace with your desired Michelin file name
 
 def get_place_rating(name: str, address: str) -> Optional[float]:
     """Fetch Google Places rating for a restaurant."""
@@ -119,15 +123,38 @@ def data_exists_in_mongo() -> bool:
     collection = db[COLLECTION_NAME]
     return collection.count_documents({}) > 0  # Returns True if documents exist, otherwise False
 
+# Function to download data from GitHub and upload to GCS
+def download_github_to_gcs():
+    """Download data from GitHub and upload it to Google Cloud Storage."""
+    try:
+        response = requests.get(REST_GITHUB_URL)
+        response.raise_for_status()
+        csv_data = response.text
+
+        # Upload to GCS
+        client = storage.Client()
+        bucket = client.bucket(MICHELIN_BUCKET_NAME)  # Use the new variable
+        blob = bucket.blob(MICHELIN_FILE_NAME)  # Use the new variable
+        blob.upload_from_string(csv_data, content_type='text/csv')
+
+        print("Data downloaded from GitHub and uploaded to GCS successfully.")
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to download from GitHub: {e}")
+    except Exception as e:
+        print(f"Failed to upload to GCS: {e}")
+
 # Modify the call_api function to check for GCS data first
 def call_api():
+    # Download from GitHub and upload to GCS
+    download_github_to_gcs()
+
     # Check if data exists in MongoDB
     if data_exists_in_mongo():
         print("Data already exists in MongoDB. Skipping API call.")
         return None  # Skip API call if data exists
 
     # Attempt to get data from GCS
-    gcs_data = get_data_from_gcs('your_bucket_name', 'your_file_name.csv')
+    gcs_data = get_data_from_gcs(MICHELIN_BUCKET_NAME, MICHELIN_FILE_NAME)  # Use the new variable
     if gcs_data:
         return gcs_data  # Return GCS data if available
 
@@ -221,10 +248,10 @@ default_args = {
 }
 
 dag = DAG(
-    'daily_api_call',
+    'michelin_star_explorer',
     default_args=default_args,
     description='A simple DAG to call an API daily',
-    schedule='@daily',  # This schedule runs the DAG once a day
+    schedule='@monthly',  # This schedule runs the DAG once a day
     catchup=False,  # Set to False to prevent backfilling
 )
 

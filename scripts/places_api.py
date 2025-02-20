@@ -50,7 +50,7 @@ def get_place_rating(name: str, address: str) -> Optional[float]:
         return None
 
 # Read the CSV
-df = pd.read_csv(f'{data_folder}michelin_my_maps.csv')
+df = pd.read_csv(f'{data_folder}michelin_data.csv')
 
 # Add Google ratings column
 df['google_rating'] = None

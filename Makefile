@@ -5,7 +5,6 @@ PYTHON_VERSION=3.10.6
 VENV_NAME=michelin_af
 REQUIREMENTS_FILE=requirements.txt
 AIRFLOW_HOME=$(shell pwd)
-
 DAG_FILE=$(AIRFLOW_HOME)/dags/airflow_dag.py
 VENV_DIR=$(AIRFLOW_HOME)/$(VENV_NAME)  # Directory for the virtual environment
 MONGO_URI='mongodb://localhost:27017'
@@ -48,6 +47,7 @@ init:
 .PHONY: start
 start:
 	echo $(AIRFLOW_HOME)
+	@export AIRFLOW_HOME=$(AIRFLOW_HOME)
 	@echo "Starting Airflow web server..."
 	airflow webserver --port 8080 &
 	@echo "Starting Airflow scheduler..."
@@ -63,5 +63,4 @@ clean:
 .PHONY: run
 run:
 	@echo "Triggering the DAG..."
-	@pyenv activate $(VENV_NAME) && \
 	airflow dags trigger daily_api_call
