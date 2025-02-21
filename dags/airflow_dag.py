@@ -216,6 +216,7 @@ def places_api_call():
         json_data = csv_to_json(csv_output.getvalue())
         json_to_mongo(json_data)
     print(f"Google API DAG Task completed successfully")
+    
 
 # Aggregation function to summarize Michelin restaurant data
 def aggregate_michelin_data():
