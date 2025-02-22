@@ -96,7 +96,6 @@ def csv_to_json(csv_data):
         json_data = [row for row in csv_reader]
     return json_data
 
-# Define the function that calls the API
 def call_api():
     try:
         response = requests.get(REST_GITHUB_URL)
@@ -132,54 +131,7 @@ def google_dag():
         json_to_mongo(json_data)
     print(f"Google API DAG Task completed successfully")
 
-# Aggregation function to summarize Michelin restaurant data
-def aggregate_michelin_data():
-    """Aggregates Michelin restaurant data and stores results in MongoDB."""
-    client = MongoClient(MONGO_URI)
-    db = client[DB_NAME]
-    collection = db[COLLECTION_NAME]
 
-    # Extract City & Country from "Location" column
-    collection.update_many(
-        {},
-        [
-            {"$set": {
-                "City": {"$arrayElemAt": [{"$split": ["$Location", ", "]}, 0]},
-                "Country": {"$arrayElemAt": [{"$split": ["$Location", ", "]}, 1]}
-            }}
-        ]
-    )
-
-    # Aggregation pipeline
-    pipeline = [
-        {
-            "$group": {
-                "_id": {"City": "$City", "Country": "$Country"},
-                "avg_google_rating": {"$avg": "$google_rating"},
-                "michelin_3_star_count": {"$sum": {"$cond": [{"$eq": ["$Award", "3 Stars"]}, 1, 0]}},
-                "michelin_2_star_count": {"$sum": {"$cond": [{"$eq": ["$Award", "2 Stars"]}, 1, 0]}},
-                "michelin_1_star_count": {"$sum": {"$cond": [{"$eq": ["$Award", "1 Star"]}, 1, 0]}},
-                "bib_gourmand_count": {"$sum": {"$cond": [{"$eq": ["$Award", "Bib Gourmand"]}, 1, 0]}},
-                "selected_count": {"$sum": {"$cond": [{"$eq": ["$Award", "Selected"]}, 1, 0]}},
-                "total_restaurants": {"$sum": 1}
-            }
-        },
-        {"$sort": {"total_restaurants": -1}},
-        {
-            "$merge": {
-                "into": 'michelin_ratings_by_location',
-                "whenMatched": "merge",
-                "whenNotMatched": "insert"
-            }
-        }
-    ]
-
-    # Execute aggregation
-    collection.aggregate(pipeline)
-    print(f"Aggregated data stored in 'michelin_ratings_by_location'")
-
-
-# Define the DAG
 default_args = {
     'owner': 'airflow',
     'start_date': datetime(2025, 2, 18),  # Set your desired start date

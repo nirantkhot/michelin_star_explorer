@@ -72,10 +72,7 @@ def get_place_rating(name: str, address: str) -> Optional[float]:
 
 
 # Function to upllad data into Mongo collection
-def json_to_mongo(json_data):
-    client = MongoClient(MONGO_URI)
-    db = client[DB_NAME]
-    collection = db[COLLECTION_NAME]
+def json_to_mongo(client, db, collection, json_data):
 
     updated_count = 0
     inserted_count = 0
@@ -103,8 +100,10 @@ def csv_to_json(csv_data):
 
 # Function to get data from Google Cloud Storage
 def get_data_from_gcs(bucket_name: str, file_name: str) -> Optional[str]:
-    """Fetch data from a specified GCS bucket and file."""
-    client = storage.Client()
+    """Fetch data from a specified GCS bucket and file using Google Cloud credentials."""
+    # Load credentials from a specified file
+    credentials_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+    client = storage.Client.from_service_account_json(credentials_path)
     bucket = client.bucket(bucket_name)
     blob = bucket.blob(file_name)
 
@@ -216,53 +215,159 @@ def places_api_call():
         json_data = csv_to_json(csv_output.getvalue())
         json_to_mongo(json_data)
     print(f"Google API DAG Task completed successfully")
-    
 
-# Aggregation function to summarize Michelin restaurant data
-def aggregate_michelin_data():
-    """Aggregates Michelin restaurant data and stores results in MongoDB."""
+
+
+def connect_to_mongo(MONGO_URI, DB_NAME, COLLECTION_NAME):
     client = MongoClient(MONGO_URI)
     db = client[DB_NAME]
     collection = db[COLLECTION_NAME]
+    return client, db, collection
 
-    # Extract City & Country from "Location" column
-    collection.update_many(
-        {},
-        [
-            {"$set": {
-                "City": {"$arrayElemAt": [{"$split": ["$Location", ", "]}, 0]},
-                "Country": {"$arrayElemAt": [{"$split": ["$Location", ", "]}, 1]}
-            }}
-        ]
-    )
+from pymongo import MongoClient
 
-    # Aggregation pipeline
+def aggregate_michelin_cuisine_context(client, db, collection , OUTPUT_COLLECTION="restaurants_per_cuisine", write_to_db=False):
+    """
+    Fetches Michelin cuisine context, including average Google rating and Michelin award distribution.
+    If `write_to_db=True`, writes results into the OUTPUT_COLLECTION using $merge.
+    """
+
     pipeline = [
         {
             "$group": {
-                "_id": {"City": "$City", "Country": "$Country"},
-                "avg_google_rating": {"$avg": "$google_rating"},
-                "michelin_3_star_count": {"$sum": {"$cond": [{"$eq": ["$Award", "3 Stars"]}, 1, 0]}},
-                "michelin_2_star_count": {"$sum": {"$cond": [{"$eq": ["$Award", "2 Stars"]}, 1, 0]}},
-                "michelin_1_star_count": {"$sum": {"$cond": [{"$eq": ["$Award", "1 Star"]}, 1, 0]}},
-                "bib_gourmand_count": {"$sum": {"$cond": [{"$eq": ["$Award", "Bib Gourmand"]}, 1, 0]}},
-                "selected_count": {"$sum": {"$cond": [{"$eq": ["$Award", "Selected"]}, 1, 0]}},
+                "_id": "$michelin_info.Cuisine",
+                "google_rating": {"$avg": "$google_info.google_rating"},
+                "michelin_rating": {
+                    "three_stars": {"$sum": {"$cond": [{"$eq": ["$michelin_info.Award", "3 Stars"]}, 1, 0]}},
+                    "two_stars": {"$sum": {"$cond": [{"$eq": ["$michelin_info.Award", "2 Stars"]}, 1, 0]}},
+                    "one_star": {"$sum": {"$cond": [{"$eq": ["$michelin_info.Award", "1 Star"]}, 1, 0]}},
+                    "bib_gourmand": {"$sum": {"$cond": [{"$eq": ["$michelin_info.Award", "Bib Gourmand"]}, 1, 0]}},
+                    "selected": {"$sum": {"$cond": [{"$eq": ["$michelin_info.Award", "Selected"]}, 1, 0]}}
+                },
                 "total_restaurants": {"$sum": 1}
             }
         },
-        {"$sort": {"total_restaurants": -1}},
-        {
+        {"$sort": {"google_rating": -1}}
+    ]
+
+    result = list(collection.aggregate(pipeline, allowDiskUse=True))
+
+    # Print results
+    for entry in result:
+        print(entry)
+
+    # Write to MongoDB if write_to_db=True
+    if write_to_db:
+        pipeline.append({
             "$merge": {
-                "into": 'michelin_ratings_by_location',
+                "into": OUTPUT_COLLECTION,
                 "whenMatched": "merge",
                 "whenNotMatched": "insert"
             }
-        }
+        })
+        collection.aggregate(pipeline, allowDiskUse=True)
+        print(f"Data written to '{OUTPUT_COLLECTION}' collection.")
+
+    client.close()
+
+    return result
+
+from pymongo import MongoClient
+
+def count_michelin_starred_restaurants(client, db, collection, output_collection="restaurants_per_city", write_to_db=False):
+    """
+    Counts restaurants per city & country, considering only 1, 2, or 3 Michelin stars.
+    Excludes "Bib Gourmand" and "Selected".
+    If `write_to_db=True`, writes results into the OUTPUT_COLLECTION using $merge.
+    """
+
+
+    pipeline = [
+        {
+            "$match": {
+                "michelin_info.Location": { "$exists": True, "$ne": "" },
+                "michelin_info.Award": { "$in": ["1 Star", "2 Stars", "3 Stars"] }  # Exclude "Bib Gourmand" & "Selected"
+            }
+        },
+        {
+            "$set": {
+                "City": { "$arrayElemAt": [{ "$split": ["$michelin_info.Location", ", "] }, 0] },
+                "Country": { "$arrayElemAt": [{ "$split": ["$michelin_info.Location", ", "] }, 1] }
+            }
+        },
+        {
+            "$group": {
+                "_id": { "City": "$City", "Country": "$Country" },
+                "total_restaurants": { "$sum": 1 }
+            }
+        },
+        { "$sort": { "total_restaurants": -1 } }
     ]
 
-    # Execute aggregation
-    collection.aggregate(pipeline)
-    print(f"Aggregated data stored in 'michelin_ratings_by_location'")
+    result = list(collection.aggregate(pipeline, allowDiskUse=True))
+
+    # Print results
+    for entry in result:
+        print(entry)
+
+    # Write to MongoDB if write_to_db=True
+    if write_to_db:
+        pipeline.append({
+            "$merge": {
+                "into": output_collection,
+                "whenMatched": "merge",
+                "whenNotMatched": "insert"
+            }
+        })
+        collection.aggregate(pipeline, allowDiskUse=True)
+        print(f"Data written to '{output_collection}' collection.")
+
+    return result
+
+
+def count_three_star_michelin_restaurants(client, db, collection, output_collection="three_star_restaurants_per_city", write_to_db=False):
+    """
+    Counts 3-star Michelin restaurants per city & country.
+    If `write_to_db=True`, writes results into the OUTPUT_COLLECTION using $merge.
+    """
+    pipeline = [
+        {
+            "$match": { "michelin_info.Award": "3 Stars" }  # Only 3-Star restaurants
+        },
+        {
+            "$set": {
+                "City": { "$arrayElemAt": [{ "$split": ["$michelin_info.Location", ", "] }, 0] },
+                "Country": { "$arrayElemAt": [{ "$split": ["$michelin_info.Location", ", "] }, 1] }
+            }
+        },
+        {
+            "$group": {
+                "_id": { "City": "$City", "Country": "$Country" },
+                "three_star_count": { "$sum": 1 }
+            }
+        },
+        { "$sort": { "three_star_count": -1 } }
+    ]
+
+    result = list(collection.aggregate(pipeline, allowDiskUse=True))
+
+    # Print results
+    for entry in result:
+        print(entry)
+
+    # Write to MongoDB if write_to_db=True
+    if write_to_db:
+        pipeline.append({
+            "$merge": {
+                "into": output_collection,
+                "whenMatched": "merge",
+                "whenNotMatched": "insert"
+            }
+        })
+        collection.aggregate(pipeline, allowDiskUse=True)
+        print(f"Data written to '{output_collection}' collection.")
+
+    return result
 
 
 # Define the DAG
