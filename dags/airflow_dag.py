@@ -10,8 +10,8 @@ import time
 from typing import Optional
 import os
 from dotenv import load_dotenv
-from google.cloud import storage
 from pymongo import MongoClient
+
 load_dotenv()
 
 # Restaurant Github CSV data
@@ -376,11 +376,11 @@ def count_three_star_michelin_restaurants(client, db, collection, output_collect
     return result
 
 
-def run_aggregation(MONGO_URI, DB_NAME, COLLECTION_NAME):
+def run_aggregation(MONGO_URI, DB_NAME, COLLECTION_NAME, write_to_db=False):
     client, db, collection = connect_to_mongo(MONGO_URI, DB_NAME, COLLECTION_NAME)
-    count_restaurant_per_cuisine(client, db, collection)
-    count_michelin_starred_restaurants(client, db, collection)
-    count_three_star_michelin_restaurants(client, db, collection)
+    count_restaurant_per_cuisine(client, db, collection, write_to_db)
+    count_michelin_starred_restaurants(client, db, collection, write_to_db)
+    count_three_star_michelin_restaurants(client, db, collection, write_to_db)
     print("Aggregation completed successfully")
 
 
