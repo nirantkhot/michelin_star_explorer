@@ -2,7 +2,6 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 import requests
 import csv
-import json
 from io import StringIO
 from datetime import datetime
 from pymongo import MongoClient
@@ -11,24 +10,24 @@ import time
 from typing import Optional
 import os
 from dotenv import load_dotenv
-from scripts.michelin_cuisine_aggregation import aggregate_top_cuisines_by_rating
 from google.cloud import storage
-
+from pymongo import MongoClient
 load_dotenv()
 
 # Restaurant Github CSV data
 REST_GITHUB_URL = os.getenv('REST_GITHUB_URL')
-# Load MongoDB connection details from environment variables
-MONGO_URI = os.getenv('MONGO_URI', 'mongodb://localhost:27017')
-DB_NAME = os.getenv('DB_NAME', 'msds-697-section-2')
-COLLECTION_NAME = os.getenv('COLLECTION_NAME', 'testRestaurants')
+
+MONGO_URI = os.getenv('MONGO_URI')
+DB_NAME = os.getenv('DB_NAME')
+COLLECTION_NAME = os.getenv('COLLECTION_NAME')
+credentials_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
 if not GOOGLE_PLACES_API_KEY:
     raise ValueError("Please set GOOGLE_PLACES_API_KEY in .env file")
 
 # Define variables for GCS bucket and file name
 MICHELIN_BUCKET_NAME = os.getenv('MICHELIN_BUCKET_NAME')  # Replace with your Michelin bucket name
-MICHELIN_FILE_NAME = 'michelin_data.csv'  # Replace with your desired Michelin file name
+MICHELIN_FILE_NAME = os.getenv('MICHELIN_FILE_NAME')  # Replace with your desired Michelin file name
 
 def get_place_rating(name: str, address: str) -> Optional[float]:
     """Fetch Google Places rating for a restaurant."""
@@ -99,10 +98,9 @@ def csv_to_json(csv_data):
     return json_data
 
 # Function to get data from Google Cloud Storage
-def get_data_from_gcs(bucket_name: str, file_name: str) -> Optional[str]:
+def get_data_from_gcs(bucket_name: str, file_name: str, credentials_path: str) -> Optional[str]:
     """Fetch data from a specified GCS bucket and file using Google Cloud credentials."""
     # Load credentials from a specified file
-    credentials_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
     client = storage.Client.from_service_account_json(credentials_path)
     bucket = client.bucket(bucket_name)
     blob = bucket.blob(file_name)
@@ -123,6 +121,15 @@ def data_exists_in_mongo(mongo_uri: str, db_name: str, collection_name: str, fil
     # Use the provided filter criteria or an empty dict if none is provided
     return collection.count_documents(filter_criteria or {}) > 0  # Returns True if documents exist, otherwise False
 
+#func to check if data exists in gcs
+def data_exists_in_gcs(bucket_name: str, file_name: str, credentials_path: str) -> bool:
+    """Check if data exists in Google Cloud Storage."""
+    #load credentials from a specified file
+    client = storage.Client.from_service_account_json(credentials_path)
+    bucket = client.bucket(bucket_name)
+    blob = bucket.blob(file_name)
+    return blob.exists()
+
 def fetch_github_data(source_url) -> Optional[str]:
     """Fetch data from GitHub."""
     try:
@@ -133,10 +140,10 @@ def fetch_github_data(source_url) -> Optional[str]:
         print(f"Failed to download from GitHub: {e}")
         return None
 
-def upload_to_gcs(data: str, bucket_name: str, file_name: str):
+def upload_to_gcs(data: str, bucket_name: str, file_name: str, credentials_path: str):
     """Upload data to Google Cloud Storage."""
     try:
-        client = storage.Client()
+        client = storage.Client.from_service_account_json(credentials_path)
         bucket = client.bucket(bucket_name)
         blob = bucket.blob(file_name)
         blob.upload_from_string(data, content_type='text/csv')
@@ -144,9 +151,9 @@ def upload_to_gcs(data: str, bucket_name: str, file_name: str):
     except Exception as e:
         print(f"Failed to upload to GCS: {e}")
 
-def download_from_gcs(bucket_name: str, file_name: str) -> Optional[str]:
+def download_from_gcs(bucket_name: str, file_name: str, credentials_path: str) -> Optional[str]:
     """Download data from Google Cloud Storage."""
-    client = storage.Client()
+    client = storage.Client.from_service_account_json(credentials_path)
     bucket = client.bucket(bucket_name)
     blob = bucket.blob(file_name)
 
@@ -168,7 +175,6 @@ def michelin_to_gcs(source_url,bucket_name, file_name):
 def call_api():
     # Download from GitHub and upload to GCS
     michelin_to_gcs(REST_GITHUB_URL,MICHELIN_BUCKET_NAME, MICHELIN_FILE_NAME )
-
     # Check if data exists in MongoDB
     if data_exists_in_mongo(MONGO_URI, DB_NAME, COLLECTION_NAME):
         print("Data already exists in MongoDB. Skipping API call.")
@@ -224,9 +230,9 @@ def connect_to_mongo(MONGO_URI, DB_NAME, COLLECTION_NAME):
     collection = db[COLLECTION_NAME]
     return client, db, collection
 
-from pymongo import MongoClient
 
-def aggregate_michelin_cuisine_context(client, db, collection , OUTPUT_COLLECTION="restaurants_per_cuisine", write_to_db=False):
+
+def count_restaurant_per_cuisine(client, db, collection , OUTPUT_COLLECTION="restaurants_per_cuisine", write_to_db=False):
     """
     Fetches Michelin cuisine context, including average Google rating and Michelin award distribution.
     If `write_to_db=True`, writes results into the OUTPUT_COLLECTION using $merge.
@@ -370,6 +376,14 @@ def count_three_star_michelin_restaurants(client, db, collection, output_collect
     return result
 
 
+def run_aggregation(MONGO_URI, DB_NAME, COLLECTION_NAME):
+    client, db, collection = connect_to_mongo(MONGO_URI, DB_NAME, COLLECTION_NAME)
+    count_restaurant_per_cuisine(client, db, collection)
+    count_michelin_starred_restaurants(client, db, collection)
+    count_three_star_michelin_restaurants(client, db, collection)
+    print("Aggregation completed successfully")
+
+
 # Define the DAG
 default_args = {
     'owner': 'airflow',
@@ -380,7 +394,7 @@ default_args = {
 dag = DAG(
     'michelin_star_explorer',
     default_args=default_args,
-    description='A simple DAG to call an API daily',
+    description='A simple DAG to call an API monthly',
     schedule='@monthly',  # This schedule runs the DAG once a day
     catchup=False,  # Set to False to prevent backfilling
 )
@@ -400,7 +414,7 @@ places_api_call_task = PythonOperator(
 
 aggregation_task = PythonOperator(
     task_id='aggregate_michelin_data',
-    python_callable=aggregate_michelin_data,
+    python_callable=run_aggregation,
     dag=dag,
 )
 
@@ -410,4 +424,5 @@ aggregation_cuisine_task = PythonOperator(
     dag=dag,
 )
 
-api_call_task >> places_api_call_task >> [ aggregation_task, aggregation_cuisine_task]
+# Update the task dependencies
+api_call_task >> places_api_call_task >> [aggregation_task, aggregation_cuisine_task]
