@@ -175,3 +175,4 @@ cython_debug/
 .env
 data/*.csv
 key/michelin-star-explorer.json
+key/michelin-star-explorer.json
