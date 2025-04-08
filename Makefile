@@ -4,7 +4,8 @@
 PYTHON_VERSION=3.10.6
 VENV_NAME=michelin_af
 REQUIREMENTS_FILE=requirements.txt
-AIRFLOW_HOME=$(shell pwd)
+# AIRFLOW_HOME=$(shell pwd)
+AIRFLOW_HOME=~/airflow
 DAG_FILE=$(AIRFLOW_HOME)/dags/airflow_dag.py
 VENV_DIR=$(AIRFLOW_HOME)/$(VENV_NAME)  # Directory for the virtual environment
 MONGO_URI='mongodb://localhost:27017'

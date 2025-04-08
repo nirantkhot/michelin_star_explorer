@@ -1,0 +1,627 @@
+[{
+  "_id": {
+    "City": "Tokyo",
+    "Country": "Japan"
+  },
+  "three_star_count": 12
+},
+{
+  "_id": {
+    "City": "Paris",
+    "Country": "France"
+  },
+  "three_star_count": 10
+},
+{
+  "_id": {
+    "City": "Hong Kong"
+  },
+  "three_star_count": 7
+},
+{
+  "_id": {
+    "City": "London",
+    "Country": "United Kingdom"
+  },
+  "three_star_count": 6
+},
+{
+  "_id": {
+    "City": "New York",
+    "Country": "USA"
+  },
+  "three_star_count": 5
+},
+{
+  "_id": {
+    "City": "Kyoto",
+    "Country": "Japan"
+  },
+  "three_star_count": 5
+},
+{
+  "_id": {
+    "City": "Barcelona",
+    "Country": "Spain"
+  },
+  "three_star_count": 4
+},
+{
+  "_id": {
+    "City": "Singapore"
+  },
+  "three_star_count": 3
+},
+{
+  "_id": {
+    "City": "San Francisco",
+    "Country": "USA"
+  },
+  "three_star_count": 3
+},
+{
+  "_id": {
+    "City": "Osaka",
+    "Country": "Japan"
+  },
+  "three_star_count": 3
+},
+{
+  "_id": {
+    "City": "Bray",
+    "Country": "United Kingdom"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Baiersbronn",
+    "Country": "Germany"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Copenhagen",
+    "Country": "Denmark"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Macau"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Donostia / San Sebastián",
+    "Country": "Spain"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Taipei",
+    "Country": "Taiwan"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Marseille",
+    "Country": "France"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Beijing",
+    "Country": "China Mainland"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Vienna",
+    "Country": "Austria"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Chicago",
+    "Country": "USA"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Shanghai",
+    "Country": "China Mainland"
+  },
+  "three_star_count": 2
+},
+{
+  "_id": {
+    "City": "Stockholm",
+    "Country": "Sweden"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Cassis",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Bad Ragaz",
+    "Country": "Switzerland"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Cáceres",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Dénia",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Taichung",
+    "Country": "Taiwan"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Les Baux-de-Provence",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Bangkok",
+    "Country": "Thailand"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Oslo",
+    "Country": "Norway"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Monaco",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Cartmel",
+    "Country": "United Kingdom"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Le Castellet",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Valence",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Fontjoncouse",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Córdoba",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Saint-Bonnet-le-Froid",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Rome",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Piesport",
+    "Country": "Germany"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Madrid",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Verona",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Munich",
+    "Country": "Germany"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Hamburg",
+    "Country": "Germany"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Brunico",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Florence",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Kobarid",
+    "Country": "Slovenia"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Wolfsburg",
+    "Country": "Germany"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Perl",
+    "Country": "Germany"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Grassau",
+    "Country": "Germany"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Gentofte",
+    "Country": "Denmark"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Reims",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Zwolle",
+    "Country": "Netherlands"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Fürstenau",
+    "Country": "Switzerland"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Senigallia",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Larrabetzu",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Villaverde de Pontones",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Arriondas",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Courchevel",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Marina del Cantone",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Roeselare",
+    "Country": "Belgium"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Stavanger",
+    "Country": "Norway"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Basel",
+    "Country": "Switzerland"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Brusaporto",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Menton",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Castel di Sangro",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Healdsburg",
+    "Country": "USA"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Vonnas",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Eugénie-les-Bains",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "El Puerto de Santa María",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Berlin",
+    "Country": "Germany"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "San Diego",
+    "Country": "USA"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Rubano",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "L'Herbaudière",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Milan",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Lasarte - Oria",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Runate",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Annecy",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Dreis",
+    "Country": "Germany"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Alba",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Chagny",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Yountville",
+    "Country": "USA"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Crissier",
+    "Country": "Switzerland"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Washington",
+    "Country": "USA"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Saint-Tropez",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Megève",
+    "Country": "France"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Modena",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Girona",
+    "Country": "Spain"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Orta San Giulio",
+    "Country": "Italy"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Antwerpen",
+    "Country": "Belgium"
+  },
+  "three_star_count": 1
+},
+{
+  "_id": {
+    "City": "Ouches",
+    "Country": "France"
+  },
+  "three_star_count": 1
+}]

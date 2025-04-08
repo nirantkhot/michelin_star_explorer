@@ -1,0 +1,1655 @@
+city,country,total_restaurants
+Tokyo,Japan,169
+Paris,France,119
+Kyoto,Japan,100
+Osaka,Japan,84
+London,United Kingdom,77
+New York,USA,64
+Shanghai,China Mainland,52
+Singapore,Singapore,50
+Hong Kong,Hong Kong SAR China,49
+Taipei,Taiwan,37
+Beijing,China Mainland,33
+Bangkok,Thailand,32
+Seoul,South Korea,31
+Barcelona,Spain,29
+San Francisco,USA,28
+Hong Kong,Hong Kong,28
+Madrid,Spain,28
+Washington,USA,26
+Nara,Japan,22
+Amsterdam,Netherlands,22
+Berlin,Germany,20
+Guangzhou,China Mainland,20
+Chicago,USA,19
+Munich,Germany,18
+Dubai,UAE,18
+Rome,Italy,18
+Milan,Italy,17
+Antwerpen,Belgium,17
+Macau,Macau,15
+São Paulo,Brazil,15
+Copenhagen,Denmark,14
+Lisbon,Portugal,14
+Zurich,Switzerland,14
+Vienna,Austria,14
+Los Angeles,USA,14
+Hamburg,Germany,13
+Chengdu,China Mainland,13
+Lyon,France,13
+Stockholm,Sweden,12
+Toronto,Canada,12
+Athens,Greece,12
+Cologne,Germany,11
+Oslo,Norway,11
+Vancouver,Canada,10
+Geneva,Switzerland,10
+Miami,USA,10
+Nuremberg,Germany,9
+Taichung,Taiwan,9
+Turin,Italy,9
+Bordeaux,France,9
+Stuttgart,Germany,8
+Valencia,Spain,8
+Atlanta,USA,8
+Frankfurt on the Main,Germany,8
+Istanbul,Türkiye,8
+Düsseldorf,Germany,8
+Hangzhou,China Mainland,8
+Rotterdam,Netherlands,8
+Nice,France,8
+Austin,USA,7
+Monaco,France,7
+Florence,Italy,7
+Brooklyn,USA,7
+Budapest,Hungary,7
+Courchevel,France,7
+Brussels,Belgium,6
+Dublin City,Ireland,6
+Orlando,USA,6
+Venice,Italy,6
+Helsinki,Finland,6
+Rio de Janeiro,Brazil,6
+Adeje,Spain,5
+Tampa,USA,5
+Maastricht,Netherlands,5
+Salzburg,Austria,5
+Kuala Lumpur,Malaysia,5
+Donostia / San Sebastián,Spain,5
+Houston,USA,5
+Strasbourg,France,5
+Gent,Belgium,5
+Porto,Portugal,5
+Annecy,France,5
+Toulouse,France,5
+Dijon,France,5
+Taormina,Italy,5
+Montpellier,France,5
+Abu Dhabi,UAE,4
+Saint Moritz,Switzerland,4
+Jaén,Spain,4
+Marseille,France,4
+Mendoza,Argentina,4
+Vilnius,Lithuania,4
+Zermatt,Switzerland,4
+Denver,USA,4
+Bilbao,Spain,4
+Gothenburg,Sweden,4
+Freiburg im Breisgau,Germany,4
+Aarhus,Denmark,4
+Basel,Switzerland,4
+Marbella,Spain,4
+Izmir,Türkiye,4
+Stavanger,Norway,4
+Amalfi,Italy,4
+Nantes,France,4
+Clermont-Ferrand,France,4
+Baiersbronn,Germany,4
+Nîmes,France,4
+Forte dei Marmi,Italy,4
+Castelnuovo Berardenga,Italy,4
+Cuauhtémoc,Mexico,4
+Sorrento,Italy,3
+Lausanne,Switzerland,3
+Modena,Italy,3
+Colmar,France,3
+Palma,Spain,3
+Verona,Italy,3
+Naples,Italy,3
+Saragossa,Spain,3
+Tongeren,Belgium,3
+Valle de Guadalupe,Mexico,3
+Ischgl,Austria,3
+Saint-Emilion,France,3
+Augsburg,Germany,3
+Calp,Spain,3
+Las Palmas de Gran Canaria,Spain,3
+Osnabrück,Germany,3
+Reims,France,3
+Hanoi,Vietnam,3
+Hanover,Germany,3
+Valletta,Malta,3
+Sirmione,Italy,3
+Luxembourg,,3
+Lille,France,3
+Münster,Germany,3
+Viareggio,Italy,3
+Leith,United Kingdom,3
+Pamplona,Spain,3
+Genoa,Italy,3
+Funchal,Portugal,3
+Birmingham,United Kingdom,3
+Santiago de Compostela,Spain,3
+Aughton,United Kingdom,3
+Kaohsiung,Taiwan,3
+Logrono,Spain,3
+Valence,France,3
+Saint-Tropez,France,3
+Madonna di Campiglio,Italy,3
+Merano,Italy,3
+Malaga,Spain,3
+Leipzig,Germany,3
+Busan,South Korea,3
+Ho Chi Minh City,Vietnam,3
+Paestum,Italy,3
+Girona,Spain,3
+Zwolle,Netherlands,3
+Lugano,Switzerland,3
+Bray,United Kingdom,3
+Rennes,France,3
+Andermatt,Switzerland,3
+Antibes,France,3
+Regensburg,Germany,3
+Avignon,France,3
+Lucerne,Switzerland,3
+Xiamen,China Mainland,3
+Bad Ragaz,Switzerland,3
+Berne,Switzerland,3
+Knokke,Belgium,3
+Versailles,France,3
+Buenos Aires,Argentina,3
+Ambleside,United Kingdom,3
+Cornaredo,Italy,2
+Brugge,Belgium,2
+Biarritz,France,2
+Costa Mesa,USA,2
+Belfast,United Kingdom,2
+Uccle,Belgium,2
+Paso Robles,USA,2
+Dallenwil,Switzerland,2
+Tournus,France,2
+Deauville,France,2
+Lamezia Terme,Italy,2
+Miranda de Ebro,Spain,2
+Bonnieux,France,2
+Murcia,Spain,2
+Cartmel,United Kingdom,2
+Beverly Hills,USA,2
+Blankenhain,Germany,2
+Dorsten,Germany,2
+Cambrils,Spain,2
+Leogang,Austria,2
+Arriondas,Spain,2
+San Michele,Italy,2
+Heverlee,Belgium,2
+Trier,Germany,2
+Illescas,Spain,2
+Karlsruhe,Germany,2
+Sankt Anton am Arlberg,Austria,2
+Ixelles,Belgium,2
+Reykjavík,Iceland,2
+Larrabetzu,Spain,2
+Eindhoven,Netherlands,2
+Ragusa,Italy,2
+Nottingham,United Kingdom,2
+Weert,Netherlands,2
+Aix-en-Provence,France,2
+Hollywood,USA,2
+Rottach-Egern,Germany,2
+Saarbrücken,Germany,2
+Isola Vulcano,Italy,2
+Nonthaburi,Thailand,2
+Cortina d'Ampezzo,Italy,2
+Braine-l'Alleud,Belgium,2
+Marke,Belgium,2
+Prague,Czechia,2
+La Ciotat,France,2
+Selva di Val Gardena,Italy,2
+Fasano del Garda,Italy,2
+Ourense,Spain,2
+Aachen,Germany,2
+Ulldecona,Spain,2
+Cambridge,United Kingdom,2
+Miami Beach,USA,2
+Catania,Italy,2
+Liège,Belgium,2
+Wernigerode,Germany,2
+Rovinj,Croatia,2
+Oaxaca,Mexico,2
+Donaueschingen,Germany,2
+Bagheria,Italy,2
+Sankt Gallen,Switzerland,2
+Mannheim,Germany,2
+Beaune,France,2
+Ascona,Switzerland,2
+Sintra,Portugal,2
+Newcastle Upon Tyne,United Kingdom,2
+Huesca,Spain,2
+Zagreb,Croatia,2
+Montalcino,Italy,2
+Serralunga d'Alba,Italy,2
+Salamanca,Spain,2
+Waalre,Netherlands,2
+Axpe,Spain,2
+Le Bourget-du-Lac,France,2
+Cesenatico,Italy,2
+Kitzbühel,Austria,2
+Hasselt,Belgium,2
+Dresden,Germany,2
+Baden-Baden,Germany,2
+Schwäbisch Hall,Germany,2
+Monforte d'Alba,Italy,2
+Santander,Spain,2
+Lindau,Germany,2
+Fuzhou,China Mainland,2
+Talloires-Montmin,France,2
+Edinburgh,United Kingdom,2
+Lacave,France,2
+Lech am Arlberg,Austria,2
+Saint-Rémy-de-Provence,France,2
+Valladolid,Spain,2
+Burgos,Spain,2
+Marlow,United Kingdom,2
+Ravello,Italy,2
+Perugia,Italy,2
+Haarlem,Netherlands,2
+Saint-Méloir-des-Ondes,France,2
+Fürstenau,Switzerland,2
+Seville,Spain,2
+Megève,France,2
+Glasgow City,United Kingdom,2
+Aosta,Italy,2
+Ulm,Germany,2
+Harderwijk,Netherlands,2
+Ventimiglia,Italy,2
+Le Puy-Sainte-Réparade,France,2
+Alba,Italy,2
+Kaysersberg,France,2
+Encino,USA,2
+Fiss,Austria,2
+Marina del Cantone,Italy,2
+Dénia,Spain,2
+Leuven,Belgium,2
+San Diego,USA,2
+Bonn,Germany,2
+Bad Neuenahr-Ahrweiler,Germany,2
+Blois,France,2
+Cheltenham,United Kingdom,2
+Koblenz,Germany,2
+Bergamo,Italy,2
+Mainz,Germany,2
+Mont-de-Marsan,France,2
+Utrecht,Netherlands,2
+Saint Vith,Belgium,2
+Vigo,Spain,2
+Béziers,France,2
+Jerez de la Frontera,Spain,2
+Essen,Germany,2
+Miguel Hildalgo,Mexico,2
+Deggendorf,Germany,2
+Xàbia,Spain,2
+Playa del Carmen,Mexico,2
+Gijón,Spain,2
+George Town,Malaysia,2
+La Wantzenau,France,2
+El Puerto de Santa María,Spain,2
+Bodrum,Türkiye,2
+Rimini,Italy,2
+Trondheim,Norway,2
+Eivissa,Spain,2
+Les Baux-de-Provence,France,2
+Carmel-by-the-Sea,USA,2
+Obernai,France,2
+Warsaw,Poland,2
+Crans-Montana,Switzerland,2
+Trani,Italy,2
+Córdoba,Spain,2
+Doha,Qatar,2
+Sigüenza,Spain,2
+Sacramento,USA,2
+Deidesheim,Germany,2
+Frasdorf,Germany,2
+Telese,Italy,2
+Ouches,France,2
+Tallinn,Estonia,2
+Sint-Kruis,Belgium,2
+Weissensee,Austria,2
+Santa Monica,USA,2
+Loenen aan de Vecht,Netherlands,2
+Port Isaac,United Kingdom,2
+Vico Equense,Italy,2
+Orta San Giulio,Italy,2
+Gargnano,Italy,2
+Positano,Italy,2
+Rubiera,Italy,2
+Fiumicino,Italy,2
+Linz,Austria,2
+Heringsdorf,Germany,2
+Fribourg,Switzerland,2
+Lorient,France,2
+Riga,Latvia,2
+Leon,Spain,2
+Èze,France,2
+Loreto,Italy,1
+Lomazzo,Italy,1
+Pontoise,France,1
+Ollon,Switzerland,1
+Torgiano,Italy,1
+Brusaporto,Italy,1
+Cervere,Italy,1
+Novalja,Croatia,1
+Étouy,France,1
+Gais,Switzerland,1
+Crissier,Switzerland,1
+Lommel,Belgium,1
+Castel San Pietro,Switzerland,1
+Flüh,Switzerland,1
+Malfa,Italy,1
+Mieming,Austria,1
+Neunburg vorm Wald,Germany,1
+Ariano Irpino,Italy,1
+Winteringham,United Kingdom,1
+San Teodoro,Italy,1
+Bragança,Portugal,1
+Wateringen,Netherlands,1
+Brenzone sul Garda,Italy,1
+Cassel,France,1
+Saint-Bonnet-le-Froid,France,1
+Brixlegg,Austria,1
+La Croix-Valmer,France,1
+Salon-de-Provence,France,1
+Weisenheim am Berg,Germany,1
+Meisenheim,Germany,1
+Furore,Italy,1
+Carlsbad,USA,1
+Hovingham,United Kingdom,1
+Le Cannet,France,1
+Olgiate Olona,Italy,1
+Marcolès,France,1
+Genk,Belgium,1
+Lichfield,United Kingdom,1
+Domodossola,Italy,1
+Simrishamn,Sweden,1
+Linguaglossa,Italy,1
+Tignes,France,1
+Altissimo,Italy,1
+Würzburg,Germany,1
+Montaigu,France,1
+Pontelongo,Italy,1
+Cadzand,Netherlands,1
+Phang-Nga,Thailand,1
+Moena,Italy,1
+San Salvador de Poio,Spain,1
+Quimper,France,1
+Montepagano,Italy,1
+Galdakao,Spain,1
+Sardas,Spain,1
+Mölnlycke,Sweden,1
+Tienen,Belgium,1
+Sölden,Austria,1
+Steyr,Austria,1
+Terrasini,Italy,1
+Châlons-en-Champagne,France,1
+Buxy,France,1
+Koewacht,Netherlands,1
+Hörnum,Germany,1
+Hoznayo,Spain,1
+Charolles,France,1
+Saint-Malo,France,1
+Molini,Italy,1
+Grandhan,Belgium,1
+Los Alamos,USA,1
+Olot,Spain,1
+Gombrèn,Spain,1
+Bélesta,France,1
+Woluwe-Saint-Pierre,Belgium,1
+Alcalá del Valle,Spain,1
+Temploux,Belgium,1
+Brunnen,Switzerland,1
+Saint-Galmier,France,1
+Sens,France,1
+Surfside,USA,1
+Jastrebarsko,Croatia,1
+Dortmund,Germany,1
+Malo,Italy,1
+Šentjošt nad Horjulom,Slovenia,1
+Trevinano,Italy,1
+Bacoli,Italy,1
+Hadersdorf am Kamp,Austria,1
+Boismorand,France,1
+Chiclana de la Frontera,Spain,1
+Niederwinkling,Germany,1
+Vannes,France,1
+The Hague,Netherlands,1
+Modica,Italy,1
+Gattikon,Switzerland,1
+Dieppe,France,1
+Vaduz,Switzerland,1
+Sibenik,Croatia,1
+Rydöbruk,Sweden,1
+Phuket,Thailand,1
+Sint-Oedenrode,Netherlands,1
+Llucmajor,Spain,1
+Henne,Denmark,1
+Espelette,France,1
+Beveren-Leie,Belgium,1
+Saint-Jean-de-Luz,France,1
+Hunstanton,United Kingdom,1
+Trieste,Italy,1
+Lucinges,France,1
+Asperg,Germany,1
+Dubrovnik,Croatia,1
+Zonhoven,Belgium,1
+Schwendi,Germany,1
+Porto Cervo,Italy,1
+Leutschach an der Weinstraße,Austria,1
+Weinstadt,Germany,1
+Flobecq,Belgium,1
+Wingen-sur-Moder,France,1
+Rijswijk,Netherlands,1
+Pollone,Italy,1
+Ruda,Italy,1
+Desenzano del Garda,Italy,1
+Lumio,France,1
+Barizo,Spain,1
+Malmo,Sweden,1
+Montecito,USA,1
+Tvååker,Sweden,1
+Heelsum,Netherlands,1
+Troinex,Switzerland,1
+Montepulciano,Italy,1
+Dolegna del Collio,Italy,1
+Nancy,France,1
+Driebergen-Rijsenburg,Netherlands,1
+Cheseaux-Noréaz,Switzerland,1
+Colombières-sur-Orb,France,1
+Sint-Idesbald,Belgium,1
+Roeselare,Belgium,1
+Trébeurden,France,1
+Ville-d'Avray,France,1
+Vorchdorf,Austria,1
+Errenteria,Spain,1
+Laguna Beach,USA,1
+Sant Julià de Ramis,Spain,1
+Pontinia,Italy,1
+Vallesaccarda,Italy,1
+Le Mans,France,1
+Cashel,Ireland,1
+La Roche-l'Abeille,France,1
+Capelle aan den IJssel,Netherlands,1
+Vonnas,France,1
+Aspen,USA,1
+Blainville-sur-Mer,France,1
+Loches,France,1
+Saint-Georges-sur-Meuse,Belgium,1
+Pont-Aven,France,1
+Peschici,Italy,1
+Bouliac,France,1
+Boulleret,France,1
+Åkirkeby,Denmark,1
+Odenthal,Germany,1
+Brusciano,Italy,1
+Duisburg,Germany,1
+Anglès,Spain,1
+Angoulême,France,1
+Wilderswil,Switzerland,1
+Cavaion Veronese,Italy,1
+Santo Stefano Belbo,Italy,1
+Anderlecht,Belgium,1
+Laubach,France,1
+Amboise,France,1
+Vernante,Italy,1
+Couilly-Pont-aux-Dames,France,1
+Alacant,Spain,1
+Cascais,Portugal,1
+Imperia,Italy,1
+Tolosa,Spain,1
+Sankt Gilgen,Austria,1
+Great Milton,United Kingdom,1
+Lahr,Germany,1
+Eygalières,France,1
+Guía de Isora,Spain,1
+Getaria,Spain,1
+Waasmunster,Belgium,1
+Manosque,France,1
+Wittenbach,Switzerland,1
+Oltressenda Alta,Italy,1
+Écully,France,1
+Squille,Italy,1
+Ariccia,Italy,1
+Calldetenes,Spain,1
+Ligerz,Switzerland,1
+Altaussee,Austria,1
+Aue - Bad Schlema,Germany,1
+Haltern am See,Germany,1
+Noli,Italy,1
+Castel di Sangro,Italy,1
+Illhaeusern,France,1
+Bruton,United Kingdom,1
+Emptinne,Belgium,1
+Kernen im Remstal,Germany,1
+Kruiningen,Netherlands,1
+Polesine Parmense,Italy,1
+Croix,France,1
+East Wallhouses,United Kingdom,1
+Beaulieu-sur-Mer,France,1
+Ticciano,Italy,1
+Tavarnelle Val di Pesa,Italy,1
+Portbou,Spain,1
+Erfurt,Germany,1
+Trémolat,France,1
+Elverdinge,Belgium,1
+Bietigheim-Bissingen,Germany,1
+Santa Cruz de Campezo,Spain,1
+Meersburg,Germany,1
+Tavira,Portugal,1
+Châtel-Guyon,France,1
+Ambierle,France,1
+Prenois,France,1
+Mercuès,France,1
+Waldenbuch,Germany,1
+Santa Coloma de Gramenet,Spain,1
+Sardón de Duero,Spain,1
+Vals,Switzerland,1
+Bennekom,Netherlands,1
+Elche,Spain,1
+Colombey-les-Deux-Églises,France,1
+Onzain,France,1
+Vailly,France,1
+Conca dei Marini,Italy,1
+Puos d'Alpago,Italy,1
+Duiven,Netherlands,1
+Sankt Veit im Pongau,Austria,1
+Großraming,Austria,1
+Modave,Belgium,1
+Boulder,USA,1
+Tata,Hungary,1
+Bad Kötzing,Germany,1
+Alcanar,Spain,1
+Morston,United Kingdom,1
+Lavalette,France,1
+Charmes-sur-Rhône,France,1
+Willemstad,Netherlands,1
+Santa Comba,Spain,1
+Llanes,Spain,1
+Canfranc-Estación,Spain,1
+Lorgues,France,1
+Amersham,United Kingdom,1
+Plymouth,United Kingdom,1
+Stumm,Austria,1
+Neuhausen,Germany,1
+Vejle,Denmark,1
+Isle of Skye,United Kingdom,1
+Saint-Didier-de-la-Tour,France,1
+Coral Gables,USA,1
+Tramacastilla,Spain,1
+O Grove,Spain,1
+Playa de las Américas,Spain,1
+Lindesnes,Norway,1
+Culver City,USA,1
+Erkelenz,Germany,1
+Hergiswil,Switzerland,1
+Wall,United Kingdom,1
+Marina di Grosseto,Italy,1
+Ruka,Finland,1
+Peralada,Spain,1
+Bourg-Charente,France,1
+Oisterwijk,Netherlands,1
+Strongoli,Italy,1
+Zarza de Granadilla,Spain,1
+Toledo,Spain,1
+Le Lavandou,France,1
+Somma Vesuviana,Italy,1
+Bonnétage,France,1
+Pudiano,Italy,1
+St Julian's,Malta,1
+Nieul,France,1
+Castricum,Netherlands,1
+la Nucía,Spain,1
+Velbert,Germany,1
+Hengelo,Netherlands,1
+Graz,Austria,1
+Concesio,Italy,1
+Cocentaina,Spain,1
+Corvara in Badia,Italy,1
+Sabran,France,1
+Novi Slankamen,Serbia,1
+Baudour,Belgium,1
+Montluçon,France,1
+Thomastown,Ireland,1
+Maßweiler,Germany,1
+Benicarló,Spain,1
+Menzingen,Switzerland,1
+Villeneuve-lès-Avignon,France,1
+Flensburg,Germany,1
+Manerba del Garda,Italy,1
+Holten,Netherlands,1
+Cuxhaven,Germany,1
+Riedholz,Switzerland,1
+Amorebieta - Etxano,Spain,1
+Sant Josep de sa Talaia,Spain,1
+Albufeira,Portugal,1
+Baltimore,Ireland,1
+Saint-Martin-de-Belleville,France,1
+Lacco Ameno,Italy,1
+Fosdinovo,Italy,1
+Cromvoirt,Netherlands,1
+Marcq-en-Barœul,France,1
+Valmont,France,1
+Harome,United Kingdom,1
+Holt,United Kingdom,1
+Replonges,France,1
+Schoorl,Netherlands,1
+Mulhouse,France,1
+Douvaine,France,1
+Almansa,Spain,1
+El Ejido,Spain,1
+Mali Lošinj,Croatia,1
+Archi,Italy,1
+Bernried,Germany,1
+Bad Kissingen,Germany,1
+Eggenstein-Leopoldshafen,Germany,1
+Mountain View,USA,1
+Cambados,Spain,1
+Schirgiswalde-Kirschau,Germany,1
+San Gimignano,Italy,1
+Urdaitz,Spain,1
+Oppeano,Italy,1
+Crieff,United Kingdom,1
+Vigevano,Italy,1
+Chaudes-Aigues,France,1
+Piesport,Germany,1
+Salach,Germany,1
+Matapozuelos,Spain,1
+Benissa,Spain,1
+Esztergom,Hungary,1
+Anacapri,Italy,1
+Villa di Chiavenna,Italy,1
+Castelló d'Empúries,Spain,1
+Staphorst,Netherlands,1
+Saint-Médard,France,1
+Bidart,France,1
+North Salem,USA,1
+Heist,Belgium,1
+Monswiller,France,1
+Amtzell,Germany,1
+Prien am Chiemsee,Germany,1
+Montemerano,Italy,1
+Askham,United Kingdom,1
+Fuissé,France,1
+Flayosc,France,1
+Gummersbach,Germany,1
+Alcossebre,Spain,1
+Cancale,France,1
+Sonceboz,Switzerland,1
+Feldberger Seenlandschaft,Germany,1
+Sort,Spain,1
+Saint-Cyprien,France,1
+Baschi,Italy,1
+Gémenos,France,1
+Vailhan,France,1
+Languimberg,France,1
+Monza,Italy,1
+Valdemoro,Spain,1
+Menton,France,1
+Gernsbach,Germany,1
+Fondettes,France,1
+Tomelloso,Spain,1
+Névez,France,1
+Pinerolo,Italy,1
+Leibnitz,Austria,1
+Mazzorbo,Italy,1
+Paderborn,Germany,1
+Putignano,Italy,1
+Saint-Cannat,France,1
+Santarém,Portugal,1
+Torre del Greco,Italy,1
+Port d'Alcúdia,Spain,1
+Conques-en-Rouergue,France,1
+St-Martens-Voeren,Belgium,1
+Faulquemont,France,1
+Ponferrada,Spain,1
+Grasmere,United Kingdom,1
+Menai Bridge,United Kingdom,1
+Les Sorinières,France,1
+Hampton in Arden,United Kingdom,1
+Chartres,France,1
+Mules,Italy,1
+Steinfort,Luxembourg,1
+Whatcote,United Kingdom,1
+Sartène,France,1
+Bad Säckingen,Germany,1
+Assignan,France,1
+Ninove,Belgium,1
+Sint-Denijs,Belgium,1
+Ravenstein,Netherlands,1
+Belgrade,Serbia,1
+Bazel,Belgium,1
+Toblach,Italy,1
+Belcastel,France,1
+Pesaro,Italy,1
+Duggendorf,Germany,1
+Peñafiel,Spain,1
+Rouen,France,1
+Dermbach,Germany,1
+Sønderborg,Denmark,1
+Daroca de Rioja,Spain,1
+Lunéville,France,1
+Saint-Avé,France,1
+Gentofte,Denmark,1
+Trosly-Loire,France,1
+Port-Lesney,France,1
+Pleiskirchen,Germany,1
+Innervillgraten,Austria,1
+Puegnago sul Garda,Italy,1
+Etretat,France,1
+Bologna,Italy,1
+Villa d'Almè,Italy,1
+San Casciano dei Bagni,Italy,1
+Sankt Wendel,Germany,1
+Wolvega,Netherlands,1
+Porto San Giorgio,Italy,1
+Bury St Edmunds,United Kingdom,1
+La Rochelle,France,1
+Cabo San Lucas,Mexico,1
+Romoos,Switzerland,1
+Villaverde de Pontones,Spain,1
+Verbier,Switzerland,1
+Bellvís,Spain,1
+Langenzenn,Germany,1
+Herleshausen,Germany,1
+Marenne,Belgium,1
+San Pantaleo,Italy,1
+Collias,France,1
+Trittenheim,Germany,1
+Chiusdino,Italy,1
+Venaria Reale,Italy,1
+Castroverde de Campos,Spain,1
+Cassis,France,1
+Birkweiler,Germany,1
+Labico,Italy,1
+Ponte San Pietro,Italy,1
+Oudenburg,Belgium,1
+Rolleboise,France,1
+Gramsbergen,Netherlands,1
+Palermo,Italy,1
+Seignosse,France,1
+Nideggen,Germany,1
+Illschwang,Germany,1
+Creemore,Canada,1
+Guéthary,France,1
+Seggiano,Italy,1
+East Mersea,United Kingdom,1
+Quint-Fonsegrives,France,1
+Da Nang,Vietnam,1
+West Hollywood,USA,1
+Penarth,United Kingdom,1
+Llanddewi Skirrid,United Kingdom,1
+Château-Arnoux-Saint-Auban,France,1
+Montignies-Saint-Christophe,Belgium,1
+Argentan,France,1
+Dorking,United Kingdom,1
+North York,Canada,1
+Timmendorfer Strand,Germany,1
+Mâcon,France,1
+Vietri sul Mare,Italy,1
+San Lorenzo de El Escorial,Spain,1
+La Vall de Bianya,Spain,1
+A Coruña,Spain,1
+Braithwaite,United Kingdom,1
+De Lutte,Netherlands,1
+Riquewihr,France,1
+Maria Wörth,Austria,1
+Auerbach in der Oberpfalz,Germany,1
+Sankt Kathrein am Offenegg,Austria,1
+Le Havre,France,1
+Turku,Finland,1
+Bubendorf,Switzerland,1
+Őriszentpéter,Hungary,1
+Carovigno,Italy,1
+Bubikon,Switzerland,1
+Salinas,Spain,1
+Anciles,Spain,1
+Werder,Germany,1
+Sankt Andrä im Sausal,Austria,1
+Levernois,France,1
+Torrance,USA,1
+La Roche-sur-Yon,France,1
+St Mellion,United Kingdom,1
+Oldstead,United Kingdom,1
+Bad Krozingen,Germany,1
+Ripon,United Kingdom,1
+Meerbusch,Germany,1
+Langho,United Kingdom,1
+Praiano,Italy,1
+Manchester,United Kingdom,1
+Meudon,France,1
+Bad Hersfeld,Germany,1
+Álvaro Obregón,Mexico,1
+San Feliz,Spain,1
+Mautern an der Donau,Austria,1
+Kasterlee,Belgium,1
+Guer,France,1
+Arbre,Belgium,1
+Endingen am Kaiserstuhl,Germany,1
+Liernu,Belgium,1
+Fiesole,Italy,1
+Oderzo,Italy,1
+Albacete,Spain,1
+Saint-Céré,France,1
+Kirchheim an der Weinstraße,Germany,1
+Darmstadt,Germany,1
+Ljubljana,Slovenia,1
+Gaiole in Chianti,Italy,1
+El Palmar,Spain,1
+Voorburg,Netherlands,1
+Grieskirchen,Austria,1
+San Martino,Italy,1
+Aerzen,Germany,1
+Mels,Switzerland,1
+Wyk,Germany,1
+Leende,Netherlands,1
+Zweiflingen,Germany,1
+Aalst,Belgium,1
+Lagos,Portugal,1
+Raxó,Spain,1
+Lormont,France,1
+Tilburg,Netherlands,1
+Veyrier-du-Lac,France,1
+Sarentino,Italy,1
+Savigno,Italy,1
+Nola,Italy,1
+Lympstone,United Kingdom,1
+Évian-les-Bains,France,1
+Pennabilli,Italy,1
+Cerniat,Switzerland,1
+Spring,USA,1
+Aureville,France,1
+Borgonato,Italy,1
+Bretignolles-sur-Mer,France,1
+Pfronten,Germany,1
+Lonigo,Italy,1
+Catanzaro,Italy,1
+Arcachon,France,1
+Winter Park,USA,1
+Longiano,Italy,1
+Our,Belgium,1
+City of Bristol,United Kingdom,1
+Wangen bei Dübendorf,Switzerland,1
+Aubonne,Switzerland,1
+Schouweiler,Luxembourg,1
+Canale,Italy,1
+Dinard,France,1
+Cáceres,Spain,1
+Castiglione della Pescaia,Italy,1
+Sint-Martens-Bodegem,Belgium,1
+Le Touquet-Paris-Plage,France,1
+Parma,Italy,1
+Capri,Italy,1
+Saint-Germain,France,1
+Pontevedra,Spain,1
+Montemonaco,Italy,1
+Saronno,Italy,1
+Colle di Val d'Elsa,Italy,1
+Fordwich,United Kingdom,1
+Grane,France,1
+L'Isle-sur-la-Sorgue,France,1
+Brantôme,France,1
+Bad Teinach-Zavelstein,Germany,1
+Neufelden,Austria,1
+Como,Italy,1
+Montchenot,France,1
+Sint-Katelijne-Waver,Belgium,1
+Steffisburg,Switzerland,1
+Le Broc,France,1
+Sorisole,Italy,1
+Gstaad,Switzerland,1
+San Piero in Bagno,Italy,1
+Noordwijk aan Zee,Netherlands,1
+Öhningen,Germany,1
+Ainhoa,France,1
+Soheit-Tinlot,Belgium,1
+Markt Indersdorf,Germany,1
+Brem-sur-Mer,France,1
+Borgoricco,Italy,1
+Pralboino,Italy,1
+Vinci,Italy,1
+Cartagena,Spain,1
+San Salvo Marina,Italy,1
+Algund,Italy,1
+Jongieux,France,1
+Pont-du-Château,France,1
+Fence,United Kingdom,1
+Bouge,Belgium,1
+Korcula,Croatia,1
+Rodez,France,1
+Agger,Denmark,1
+Groningen,Netherlands,1
+Navaleno,Spain,1
+Schmallenberg,Germany,1
+L'Herbaudière,France,1
+Lower Beeding,United Kingdom,1
+Puymirol,France,1
+Zuidlaren,Netherlands,1
+Carantec,France,1
+Giethoorn,Netherlands,1
+Ponza,Italy,1
+Bergen,Norway,1
+Volkach,Germany,1
+Sessenheim,France,1
+Blokzijl,Netherlands,1
+La Punt-Chamues-ch,Switzerland,1
+Sint-Kwintens-Lennik,Belgium,1
+Langenau,Germany,1
+Monterrey,Mexico,1
+Brampton,United Kingdom,1
+Montlivault,France,1
+Montenach,France,1
+Rubano,Italy,1
+Alassio,Italy,1
+Werfen,Austria,1
+Poznan,Poland,1
+Malataverne,France,1
+Sagàs,Spain,1
+Val-Thorens,France,1
+Chagford,United Kingdom,1
+Ardmore,Ireland,1
+Oviedo,Spain,1
+Darscheid,Germany,1
+Monbazillac,France,1
+Uriage-les-Bains,France,1
+Sierentz,France,1
+Sulzburg,Germany,1
+Penton,United Kingdom,1
+Schorndorf,Germany,1
+Priocca,Italy,1
+Casas-Ibáñez,Spain,1
+Salou,Spain,1
+Loja,Spain,1
+Marchin,Belgium,1
+Bridge,United Kingdom,1
+Nördlingen,Germany,1
+Syracuse,Italy,1
+San Maurizio Canavese,Italy,1
+Yountville,USA,1
+Plomodiern,France,1
+Balzan,Malta,1
+Hørve,Denmark,1
+Champex-Lac,Switzerland,1
+Mûr-de-Bretagne,France,1
+Quévy-le-Grand,Belgium,1
+Oberstdorf,Germany,1
+Es Canar,Spain,1
+Ardon,France,1
+Montrabé,France,1
+Prato,Italy,1
+Prendes,Spain,1
+Bagno di Romagna,Italy,1
+Cernobbio,Italy,1
+Amstelveen,Netherlands,1
+Mountsorrel,United Kingdom,1
+Saint Helena,USA,1
+Baronissi,Italy,1
+Ortiguera,Spain,1
+Rouffiac-Tolosan,France,1
+Turnhout,Belgium,1
+Dilsen,Belgium,1
+Oakland,USA,1
+Heeze,Netherlands,1
+Noordeloos,Netherlands,1
+Les Arcs,France,1
+Casanova di Terricciola,Italy,1
+Gulpen,Netherlands,1
+Piobesi d'Alba,Italy,1
+La Colle-sur-Loup,France,1
+Vicenza,Italy,1
+Wigoltingen,Switzerland,1
+Sint Willebrord,Netherlands,1
+Sant Fruitós de Bages,Spain,1
+Cormons,Italy,1
+Fiorano Modenese,Italy,1
+Muro,Spain,1
+Lecce,Italy,1
+Soriso,Italy,1
+Cognac,France,1
+Sasso Marconi,Italy,1
+Napa,USA,1
+Biot,France,1
+Le Petit-Pressigny,France,1
+Mogán,Spain,1
+Lasko,Slovenia,1
+Neerharen,Belgium,1
+Capolona,Italy,1
+Pompei,Italy,1
+Ribadesella,Spain,1
+Alleyras,France,1
+San Anselmo,USA,1
+Künten-Sulz,Switzerland,1
+Brest,France,1
+Hetton,United Kingdom,1
+Zedelgem,Belgium,1
+Roeser,Luxembourg,1
+Vogtsburg im Kaiserstuhl,Germany,1
+Conversano,Italy,1
+Castlemartyr,Ireland,1
+Champillon,France,1
+Keitum,Germany,1
+Lauterach,Austria,1
+Villanova,Spain,1
+La Madelaine-sous-Montreuil,France,1
+Padrón,Spain,1
+Grafenstein,Austria,1
+Mantello,Italy,1
+Seasalter,United Kingdom,1
+Albiate,Italy,1
+Vault-de-Lugny,France,1
+Saulieu,France,1
+Joucas,France,1
+Limburg an der Lahn,Germany,1
+Rubbianino,Italy,1
+Neustift im Stubaital,Austria,1
+Acuto,Italy,1
+Fuengirola,Spain,1
+Fisterra,Spain,1
+Malmesbury,United Kingdom,1
+Francorchamps,Belgium,1
+Odense,Denmark,1
+Lannion,France,1
+Méribel,France,1
+Krün,Germany,1
+Detmold,Germany,1
+Bellevigne-en-Layon,France,1
+Lavello,Italy,1
+Herning,Denmark,1
+Haro,Spain,1
+Aumont-Aubrac,France,1
+Llagostera,Spain,1
+Valdemorillo,Spain,1
+Godia,Italy,1
+Constance,Germany,1
+Berchtesgaden,Germany,1
+Schio,Italy,1
+Puy-en-Velay,France,1
+Almancil,Portugal,1
+Nova Levante,Italy,1
+Kruishoutem,Belgium,1
+Knowstone,United Kingdom,1
+Saint-Pol-de-Léon,France,1
+Queens,USA,1
+Weißenbrunn,Germany,1
+Sankt Ingbert,Germany,1
+Malcesine,Italy,1
+Marina di Ragusa,Italy,1
+Gien,France,1
+Noto,Italy,1
+Saint-Hilaire-de-Brethmas,France,1
+Quarto,Italy,1
+Montreuil,France,1
+Guimaraes,Portugal,1
+Drusenheim,France,1
+Ligist,Austria,1
+Lyons-la-Forêt,France,1
+Houten,Netherlands,1
+Arosa,Switzerland,1
+Padstow,United Kingdom,1
+Saint-Lô,France,1
+Sint-Denijs-Westrem,Belgium,1
+Murcott,United Kingdom,1
+Niederkassel,Germany,1
+Sonnenbühl,Germany,1
+Fredericia,Denmark,1
+Præstø,Denmark,1
+Grindavík,Iceland,1
+Ubachsberg,Netherlands,1
+Arezzo,Italy,1
+Civitella Casanova,Italy,1
+Grenzach-Wyhlen,Germany,1
+Busnes,France,1
+Pyla-sur-Mer,France,1
+Epinal,France,1
+Fontevraud-l'Abbaye,France,1
+Arbúcies,Spain,1
+Trimbach,Switzerland,1
+Licata,Italy,1
+Bad Doberan,Germany,1
+Waldbronn,Germany,1
+Llançà,Spain,1
+Ciboure,France,1
+Ondara,Spain,1
+South Dalton,United Kingdom,1
+Sant'Agata sui Due Golfi,Italy,1
+Stradella,Italy,1
+Overveen,Netherlands,1
+Arco,Italy,1
+Collioure,France,1
+Chassagne-Montrachet,France,1
+Rostock,Germany,1
+Blackrock,Ireland,1
+Scharbeutz,Germany,1
+Madulain,Switzerland,1
+Blieskastel,Germany,1
+Montreux,Switzerland,1
+Blaregnies,Belgium,1
+Beuzet,Belgium,1
+Porches,Portugal,1
+Geyserville,USA,1
+Massa Lubrense,Italy,1
+Schluchsee,Germany,1
+Apeldoorn,Netherlands,1
+Malbuisson,France,1
+Grassau,Germany,1
+Växjö,Sweden,1
+Nova Gorica,Slovenia,1
+San Pedro Garza García,Mexico,1
+Bergisch Gladbach,Germany,1
+Tarrytown,USA,1
+Torquay,United Kingdom,1
+East Grinstead,United Kingdom,1
+Villarepos,Switzerland,1
+Salerno,Italy,1
+Weissenhaus,Germany,1
+Izegem,Belgium,1
+Pernand-Vergelesses,France,1
+Savièse,Switzerland,1
+Torrenueva,Spain,1
+Cellettes,France,1
+Joigny,France,1
+Arzignano,Italy,1
+La Clusaz,France,1
+Saint Helier,United Kingdom,1
+Écaussinnes-Lalaing,Belgium,1
+Ath,Belgium,1
+Villeneuve-Loubet,France,1
+Lastours,France,1
+Adelboden,Switzerland,1
+Beetsterzwaag,Netherlands,1
+Quintanilla de Onésimo,Spain,1
+Noyal-sur-Vilaine,France,1
+Seneffe,Belgium,1
+Teisnach,Germany,1
+Wiesbaden,Germany,1
+Long Beach,USA,1
+Paliseul,Belgium,1
+Saint-Martin-sur-la-Chambre,France,1
+Angers,France,1
+Le Sambuc,France,1
+Reijmerstok,Netherlands,1
+Ainsa,Spain,1
+Cuenca,Spain,1
+Schärding,Austria,1
+Leça da Palmeira,Portugal,1
+Tux,Austria,1
+Sankt Veit am Vogau,Austria,1
+Gamlitz,Austria,1
+Laguiole,France,1
+Chagny,France,1
+Ammerschwihr,France,1
+Lughetto,Italy,1
+Kirchdorf,Germany,1
+Zele,Belgium,1
+Mechelen,Belgium,1
+Guardiagrele,Italy,1
+Sommerhausen,Germany,1
+Lagoa,Portugal,1
+Woluwe-Saint-Lambert,Belgium,1
+Châteauneuf-du-Pape,France,1
+Manduria,Italy,1
+Fellbach,Germany,1
+Sarreguemines,France,1
+Perasdorf,Germany,1
+Pujaut,France,1
+Frisange,Luxembourg,1
+Arlon,Belgium,1
+Wuppertal,Germany,1
+Castelbello,Italy,1
+Galway,Ireland,1
+Arès,France,1
+Saché,France,1
+Soria,Spain,1
+Dolcedo,Italy,1
+Patalavaca,Spain,1
+Lancenigo,Italy,1
+Vincennes,France,1
+Radebeul,Germany,1
+Breuil Cervinia,Italy,1
+Norderney,Germany,1
+Olost,Spain,1
+Simmershofen,Germany,1
+Woodside,USA,1
+Weikersheim,Germany,1
+Asti,Italy,1
+Heemstede,Netherlands,1
+Tisens,Italy,1
+Chantilly,France,1
+Carnac,France,1
+Waldkirchen,Germany,1
+Krakow,Poland,1
+Mayenne,France,1
+Ofterschwang,Germany,1
+Roermond,Netherlands,1
+Newton in Cartmel,United Kingdom,1
+Frankenberg,Germany,1
+Montbron,France,1
+Freidorf,Switzerland,1
+Saint-Brieuc,France,1
+Passignano,Italy,1
+Roscoff,France,1
+San Mateo,USA,1
+Cadiz,Spain,1
+Marzocca,Italy,1
+Duffel,Belgium,1
+Xerta,Spain,1
+Payrin-Augmontel,France,1
+Thônex,Switzerland,1
+Uhingen,Germany,1
+Saint-Alban-de-Roche,France,1
+Schaffhausen,Switzerland,1
+Le Tremblay-sur-Mauldre,France,1
+Vence,France,1
+Colerne,United Kingdom,1
+Vila Nova de Gaia,Portugal,1
+Les Sables-d'Olonne,France,1
+Torno,Italy,1
+Marburg,Germany,1
+Aduard,Netherlands,1
+Satigny,Switzerland,1
+Marina di Gioiosa Ionica,Italy,1
+Healdsburg,USA,1
+Aschau im Chiemgau,Germany,1
+Roosendaal,Netherlands,1
+Andora,Italy,1
+Elk,USA,1
+Senigallia,Italy,1
+Oxwich,United Kingdom,1
+Schipluiden,Netherlands,1
+Barbarano Vicentino,Italy,1
+Fontainebleau,France,1
+Pau,France,1
+Rantum,Germany,1
+Rosendal,Norway,1
+San Antonio,USA,1
+Garons,France,1
+Schiltigheim,France,1
+Bischofswiesen,Germany,1
+Rheda-Wiedenbrück,Germany,1
+Lønstrup,Denmark,1
+Hoofdplaat,Netherlands,1
+Canyamel,Spain,1
+Lenzburg,Switzerland,1
+Les Deux-Alpes,France,1
+Wannegem-Lede,Belgium,1
+Lier,Belgium,1
+Sorinnes,Belgium,1
+Bellinzona,Switzerland,1
+Piré-Chancé,France,1
+Deerlijk,Belgium,1
+Leucate,France,1
+Uzès,France,1
+Moirax,France,1
+Scorzè,Italy,1
+Sète,France,1
+Sappada,Italy,1
+Lembach,France,1
+Wachenheim an der Weinstraße,Germany,1
+Borgonovo Val Tidone,Italy,1
+Brunico,Italy,1
+Rougemont,Switzerland,1
+Kobarid,Slovenia,1
+Bergambacht,Netherlands,1
+Pieve d'Alpago,Italy,1
+Perl,Germany,1
+Breda,Netherlands,1
+Altkirch,France,1
+Gabicce Monte,Italy,1
+Nykøbing Sjælland,Denmark,1
+Kranjska Gora,Slovenia,1
+Tourrettes,France,1
+Pinzolo,Italy,1
+Cham,Switzerland,1
+Rivodutri,Italy,1
+Ampuero,Spain,1
+Ventabren,France,1
+York,United Kingdom,1
+Wengi bei Büren,Switzerland,1
+Balgach,Switzerland,1
+Ghirlanda,Italy,1
+Boeschepe,France,1
+Gdansk,Poland,1
+Chamonix-Mont-Blanc,France,1
+Sóller,Spain,1
+Les Eyzies-de-Tayac-Sireuil,France,1
+Bagnoles-de-l'Orne,France,1
+Lasarte - Oria,Spain,1
+Gevrey-Chambertin,France,1
+La Morra,Italy,1
+Romorantin-Lanthenay,France,1
+Grignan,France,1
+Saint-Jean-Cap-Ferrat,France,1
+Peat Inn,United Kingdom,1
+Combrit,France,1
+Schwyz,Switzerland,1
+Pettenasco,Italy,1
+Ronda,Spain,1
+Ballydehob,Ireland,1
+Zell am See,Austria,1
+Damme,Belgium,1
+Reguengos de Monsaraz,Portugal,1
+Saint-Pée-sur-Nivelle,France,1
+Saint-Raphaël,France,1
+Pont-de-Vaux,France,1
+Calistoga,USA,1
+Golling an der Salzach,Austria,1
+Nieuwkerken-Waas,Belgium,1
+Rueil-Malmaison,France,1
+Waiblingen,Germany,1
+Val-d'Isère,France,1
+Weigenheim,Germany,1
+Dole,France,1
+Treviglio,Italy,1
+Wirsberg,Germany,1
+Ostseebad Binz,Germany,1
+Jodoigne,Belgium,1
+Caen,France,1
+Moustiers-Sainte-Marie,France,1
+Plougonvelin,France,1
+Portorož,Slovenia,1
+Ordingen,Belgium,1
+La Ferrière-aux-Étangs,France,1
+Egham,United Kingdom,1
+Ettlingen,Germany,1
+Tresserve,France,1
+Nuenen,Netherlands,1
+Sagunt,Spain,1
+Benavente,Spain,1
+Oceanside,USA,1
+Baerenthal,France,1
+San Quirino,Italy,1
+Imola,Italy,1
+Horsham,United Kingdom,1
+Gouda,Netherlands,1
+Villers-sur-Lesse,Belgium,1
+Saarlouis,Germany,1
+Cadenet,France,1
+Braine-le-Château,Belgium,1
+Altillac,France,1
+Saint-Léon-sur-Vézère,France,1
+Hauteluce,France,1
+Vichy,France,1
+Potsdam,Germany,1
+'s-Hertogenbosch,Netherlands,1
+Fagnano Olona,Italy,1
+Lodi,Italy,1
+Hirschegg,Austria,1
+Hambleton,United Kingdom,1
+Carcassonne,France,1
+Tinnum,Germany,1
+Schützen am Gebirge,Austria,1
+Wolphaartsdijk,Netherlands,1
+Traunkirchen,Austria,1
+Saint-Rémy,France,1
+Montréverd,France,1
+Montbellet,France,1
+Saint-Joachim,France,1
+Les Vans,France,1
+El Masnou,Spain,1
+Saint-Vincent-de-Tyrosse,France,1
+Asiago,Italy,1
+Bad Sobernheim,Germany,1
+Rijeka,Croatia,1
+Doolin,Ireland,1
+Vienne,France,1
+Palo Alto,USA,1
+Burghausen,Germany,1
+Lincoln,Canada,1
+Leersum,Netherlands,1
+Ambronay,France,1
+Radovljica,Slovenia,1
+Castle Combe,United Kingdom,1
+Ehningen,Germany,1
+Küsnacht,Switzerland,1
+Kenilworth,United Kingdom,1
+Bowness-on-Windermere,United Kingdom,1
+Feuersbrunn,Austria,1
+Wihr-au-Val,France,1
+Ávila,Spain,1
+Le Noirmont,Switzerland,1
+Oosterhout,Netherlands,1
+Montbazon,France,1
+Vipava,Slovenia,1
+Enschede,Netherlands,1
+Bad Gleichenberg,Austria,1
+Mareuil-sur-Lay-Dissais,France,1
+Lenzerheide,Switzerland,1
+Cabriès,France,1
+Bozouls,France,1
+Bagshot,United Kingdom,1
+Strombeek-Bever,Belgium,1
+Sampans,France,1
+Losone,Switzerland,1
+Lübeck,Germany,1
+La Plaine-sur-Mer,France,1
+Oakville,Canada,1
+Albavilla,Italy,1
+Olmeto,France,1
+Corrubbio,Italy,1
+La Jarrie,France,1
+La Vancelle,France,1
+Brixen,Italy,1
+Codigoro,Italy,1
+Playa Blanca,Spain,1
+Rothenburg ob der Tauber,Germany,1
+Yverdon-les-Bains,Switzerland,1
+Krakow am See,Germany,1
+Lömmenschwil,Switzerland,1
+Porto Ercole,Italy,1
+Overijse,Belgium,1
+Grenoble,France,1
+Starnberg,Germany,1
+San Remo,Italy,1
+Obergurgl,Austria,1
+Oberwil,Switzerland,1
+Wolfsburg,Germany,1
+Nieuwpoort,Belgium,1
+Savelletri,Italy,1
+Plérin,France,1
+Ohain,Belgium,1
+Gragnano,Italy,1
+Treiso,Italy,1
+Hondarribia,Spain,1
+Interlaken,Switzerland,1
+Perpignan,France,1
+Marly-le-Roi,France,1
+Namur,Belgium,1
+Biel,Switzerland,1
+Soldeu,Andorra,1
+Passos de Silgueiros,Portugal,1
+Skelton,United Kingdom,1
+Hagondange,France,1
+Rehetobel,Switzerland,1
+Warmond,Netherlands,1
+Tuttlingen,Germany,1
+Puerto Morelos,Mexico,1
+Opglabbeek,Belgium,1
+Saratoga,USA,1
+Eboli,Italy,1
+Ansouis,France,1
+Calvisano,Italy,1
+Cioccaro,Italy,1
+Talavera de la Reina,Spain,1
+Porvoo,Finland,1
+Mane,France,1
+Vall d'Alba,Spain,1
+Cornudella de Montsant,Spain,1
+Collonges-au-Mont-d'Or,France,1
+Puymoyen,France,1
+Hasparren,France,1
+Bad Peterstal,Germany,1
+Castellammare di Stabia,Italy,1
+Fontjoncouse,France,1
+Dallas,USA,1
+Straden,Austria,1
+Landsberg am Lech,Germany,1
+Auchterarder,United Kingdom,1
+Rixheim,France,1
+Stansstad,Switzerland,1
+Zgornja Kungota,Slovenia,1
+Genazzano,Italy,1
+Torre de Juan Abad,Spain,1
+Grindelwald,Switzerland,1
+Le Castellet,France,1
+Saltwood,United Kingdom,1
+Geel,Belgium,1
+Ravina,Italy,1
+Naurath/Wald,Germany,1
+Linschoten,Netherlands,1
+Kinsale,Ireland,1
+Efringen-Kirchen,Germany,1
+Ortisei,Italy,1
+Fulda,Germany,1
+Baeza,Spain,1
+Lochau,Austria,1
+Marlenheim,France,1
+Sliema,Malta,1
+Baden,France,1
+Königsbronn,Germany,1
+Tigliole,Italy,1
+Es Capdellà,Spain,1
+Trescore Balneario,Italy,1
+Nijmegen,Netherlands,1
+Matera,Italy,1
+Hall in Tirol,Austria,1
+Gigondas,France,1
+Saint-Grégoire,France,1
+Plouider,France,1
+Runate,Italy,1
+Danjoutin,France,1
+Pouilly-sous-Charlieu,France,1
+Mdina,Malta,1
+Porto-Vecchio,France,1
+Whitebrook,United Kingdom,1
+Caudebec-en-Caux,France,1
+Rust,Germany,1
+Palmanova,Spain,1
+Sant' Agnello,Italy,1
+Terracina,Italy,1
+Ascot,United Kingdom,1
+Cherbourg-en-Cotentin,France,1
+Bath,United Kingdom,1
+San Giovanni in Fiore,Italy,1
+Arcangues,France,1
+Saint-Omer,France,1
+Saint-Valentin,France,1
+Chasselay,France,1
+Poncin,France,1
+Belle-Église,France,1
+Eltville am Rhein,Germany,1
+Mittenwald,Germany,1
+Sant Antoni de Portmany,Spain,1
+Sant Martí Sarroca,Spain,1
+Martillac,France,1
+Achenkirch,Austria,1
+Hilvarenbeek,Netherlands,1
+Dima,Spain,1
+Granges-les-Beaumont,France,1
+Kerkdriel,Netherlands,1
+Machynlleth,United Kingdom,1
+Capodacqua,Italy,1
+Rutherford,USA,1
+Madesimo,Italy,1
+Doornenburg,Netherlands,1
+Juan-les-Pins,France,1
+Ehrenhausen,Austria,1
+Giverny,France,1
+Machilly,France,1
+Tirol,Italy,1
+Cavi di Lavagna,Italy,1
+Gimenells,Spain,1
+Telfs,Austria,1
+Eugénie-les-Bains,France,1
+Dreis,Germany,1
+Brive-la-Gaillarde,France,1
+Magescq,France,1
+Cavalese,Italy,1
+Villeneuve-le-Comte,France,1
+Oetrange,Luxembourg,1
+Narbonne,France,1
+Hayingen,Germany,1
+Breuillet,France,1
+Pula,Italy,1
+Kilkenny,Ireland,1
+Portimao,Portugal,1
+Fleurie,France,1
+Heidelberg,Germany,1
+Monestier,France,1
+Neuhütten,Germany,1
+Vreeland,Netherlands,1
+Carcaixent,Spain,1
+Cavernago,Italy,1
+Hulshout,Belgium,1
+Agnone,Italy,1
+Brail,Switzerland,1
+Marietta,USA,1
+Halle (saale),Germany,1
+Bommes,France,1
+Théoule-sur-Mer,France,1
+Cheverny,France,1
+Atherton,USA,1
+Binic,France,1
+Selzen,Germany,1
+Den Hoorn,Netherlands,1
+Cucuron,France,1
+Broc,Switzerland,1
+Glücksburg,Germany,1
+Wijk bij Duurstede,Netherlands,1
+Goes,Netherlands,1
+Chamalières,France,1
+Kościelisko,Poland,1
+Maasbracht,Netherlands,1
+Sankt Wolfgang im Salzkammergut,Austria,1
+Chazelles-sur-Lyon,France,1
+Azay-le-Rideau,France,1
+Ezcaray,Spain,1
+Pirmasens,Germany,1
+Mauterndorf,Austria,1
+Périgueux,France,1
+Vitznau,Switzerland,1
+Ramatuelle,France,1
+Pulheim,Germany,1
+Wéris,Belgium,1
+Durbuy,Belgium,1
+Bad Zwischenahn,Germany,1
+Castel Maggiore,Italy,1
+Mandelieu-La Napoule,France,1
+Pézenas,France,1
+Rhinau,France,1
+Port-Louis,France,1
+Corçà,Spain,1
+Adare,Ireland,1
+Ouwegem,Belgium,1
+Ischia,Italy,1
+Kortrijk,Belgium,1
+Barr,France,1
+Chonas-l'Amballan,France,1
+Issoire,France,1
+Santa Cristina d'Aspromonte,Italy,1
+Sion,Switzerland,1
+Marlia,Italy,1
+Rigi Kaltbad,Switzerland,1
+Vaihingen an der Enz,Germany,1
+Breskens,Netherlands,1
+Orléans,France,1
+Burgdorf,Switzerland,1
+Norcia,Italy,1
+Chaintré,France,1
+Marina di Bibbona,Italy,1
+Pujaudran,France,1

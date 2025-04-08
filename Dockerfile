@@ -1,8 +1,9 @@
 # Use the official Apache Airflow image
-FROM apache/airflow:2.5.0
+FROM apache/airflow:2.7.0
 
 # Set environment variables
 ENV AIRFLOW_HOME=/opt/airflow
+ENV AIRFLOW__CORE__EXECUTOR=LocalExecutor
 
 # Copy requirements file
 COPY requirements.txt .
