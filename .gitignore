@@ -174,3 +174,4 @@ cython_debug/
 .pypirc
 .env
 data/*.csv
+key/michelin-star-explorer.json
