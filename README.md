@@ -1,4 +1,16 @@
-# michelin_star_explorer
+# Michelin Star Explorer
+
+A comprehensive data pipeline and analysis project exploring Michelin-starred restaurants worldwide.
+
+## Dashboard
+View our interactive dashboard: [Michelin Star Explorer Dashboard](https://liviaellen.com/michelin)
+
+## Data Pipeline & Visualization
+
+- Data is collected and processed through our ETL pipeline
+- Results are stored in both Google BigQuery and MongoDB
+- Interactive visualizations are created using Google Looker Studio
+- Dashboard pulls data from both Google BigQuery and MongoDB for comprehensive analysis
 
 ## Overview
 This project is an Apache Airflow DAG that orchestrates tasks related to fetching, processing, and storing restaurant data in a MongoDB database.
