@@ -12,6 +12,8 @@ View our interactive dashboard: [Michelin Star Explorer Dashboard](https://livia
 - Interactive visualizations are created using Google Looker Studio
 - Dashboard pulls data from both Google BigQuery and MongoDB for comprehensive analysis
 
+![DDS Project drawio](https://github.com/user-attachments/assets/eaa8fecd-be59-4ee3-abc3-993f497e707c)
+
 ## Overview
 This project is an Apache Airflow DAG that orchestrates tasks related to fetching, processing, and storing restaurant data in a MongoDB database.
 
